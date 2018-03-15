@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0738B77B205A5F0D00A7E227 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0738B77A205A5F0D00A7E227 /* .travis.yml */; };
+		0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738B77C205A909B00A7E227 /* HostViewController.swift */; };
 		07C328A22056B562005D042E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C328A12056B562005D042E /* AppDelegate.swift */; };
 		07C328A42056B562005D042E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C328A32056B562005D042E /* ViewController.swift */; };
 		07C328A72056B562005D042E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C328A52056B562005D042E /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		0738B77A205A5F0D00A7E227 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
+		0738B77C205A909B00A7E227 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		07C3289E2056B562005D042E /* barcodeSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C328A12056B562005D042E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C328A32056B562005D042E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				07C328A12056B562005D042E /* AppDelegate.swift */,
 				07C328A32056B562005D042E /* ViewController.swift */,
 				07C328A52056B562005D042E /* Main.storyboard */,
+				0738B77C205A909B00A7E227 /* HostViewController.swift */,
 				07C328A82056B562005D042E /* Assets.xcassets */,
 				07C328AA2056B562005D042E /* LaunchScreen.storyboard */,
 				07C328AD2056B562005D042E /* Info.plist */,
@@ -229,6 +232,7 @@
 			files = (
 				07C328A42056B562005D042E /* ViewController.swift in Sources */,
 				07C328A22056B562005D042E /* AppDelegate.swift in Sources */,
+				0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

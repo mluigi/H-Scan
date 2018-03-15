@@ -13,6 +13,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "E59FE99D1C7A0087D5A95486D5E66AE2"
+               BuildableName = "InteractiveSideMenu.framework"
+               BlueprintName = "InteractiveSideMenu"
+               ReferencedContainer = "container:Pods/Pods.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "9B2D742D2DA08A2F473FB219C5F2AB53"
                BuildableName = "Realm.framework"
                BlueprintName = "Realm"
@@ -86,20 +100,6 @@
                BlueprintIdentifier = "E85ADA5B65974786F3C610D150D8C0CA"
                BuildableName = "Pods_barcodeSuperApp.framework"
                BlueprintName = "Pods-barcodeSuperApp"
-               ReferencedContainer = "container:Pods/Pods.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E59FE99D1C7A0087D5A95486D5E66AE2"
-               BuildableName = "InteractiveSideMenu.framework"
-               BlueprintName = "InteractiveSideMenu"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
