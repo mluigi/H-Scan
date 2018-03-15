@@ -49,10 +49,10 @@
             </objects>
             <point key="canvasLocation" x="-703" y="831"/>
         </scene>
-        <!--View Controller-->
+        <!--Recent Scanned Products-->
         <scene sceneID="lvi-Uh-uFP">
             <objects>
-                <viewController storyboardIdentifier="ProductHistoryViewController" id="KO1-tE-rR8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProductHistoryViewController" title="Recent Scanned Products" id="KO1-tE-rR8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ik3-h1-0QH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="-703" y="1518"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile-->
         <scene sceneID="ESt-OT-p5r">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" id="G3a-bJ-kNr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="G3a-bJ-kNr" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JRB-fK-3QZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="-1425" y="143"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Barcode Scan-->
         <scene sceneID="LsO-6s-fAI">
             <objects>
-                <navigationController storyboardIdentifier="NavigationBarcodeViewController" automaticallyAdjustsScrollViewInsets="NO" id="PeY-6z-PPA" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationBarcodeViewController" title="Barcode Scan" automaticallyAdjustsScrollViewInsets="NO" id="PeY-6z-PPA" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="NGB-d5-AG9">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
