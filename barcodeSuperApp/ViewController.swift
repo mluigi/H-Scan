@@ -13,24 +13,14 @@ import BarcodeScanner
 
 let DB = try! Realm()
 
-class ViewController: UIViewController {
-    @IBOutlet weak var lBarcode: UILabel!
+class ViewController: BarcodeScannerViewController {
     var lastCode = ""
-
-    @IBAction func scan(_ sender: Any) {
-        let photoController = makeBarcodeScannerViewController()
-        photoController.title = "Scanner"
-        present(photoController, animated: true, completion: nil)
-    }
-
-    private func makeBarcodeScannerViewController() -> BarcodeScannerViewController {
-        let viewController = BarcodeScannerViewController()
-        viewController.isOneTimeSearch = true
-        viewController.headerViewController.closeButton.isHidden = true
-        viewController.codeDelegate = self
-        viewController.errorDelegate = self
-        viewController.dismissalDelegate = self
-        return viewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        messageViewController.textLabel.text = "Inquadra il codice a barre"
+        codeDelegate = self
+        errorDelegate = self
+        dismissalDelegate = self
     }
 }
 
@@ -38,10 +28,6 @@ extension ViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         lastCode = code
         print(lastCode)
-        lBarcode.text = lastCode
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-            controller.dismiss(animated: true, completion: nil)
-        }
     }
 }
 

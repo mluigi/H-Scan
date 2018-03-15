@@ -13,7 +13,7 @@
         <!--Scan-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SideMenuController" customModule="SideMenuSwift" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="barcodeSuperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,43 +24,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-310" y="130"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="W4k-cn-8Tr">
-            <objects>
-                <viewController id="SbV-NN-Knm" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="lQi-e1-crX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="rm8-4Z-clx"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="SideMenu.Content" customClass="SideMenuSegue" customModule="SideMenuSwift" id="xKM-0r-ev3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l2J-ky-hxA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-311" y="839"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="DO4-j8-a0f">
-            <objects>
-                <viewController id="gbh-lK-5HN" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="dbE-tE-gRi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="b0k-x6-ic0"/>
-                    </view>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="custom" identifier="SideMenu.Menu" customClass="SideMenuSegue" customModule="SideMenuSwift" id="jl6-5x-N5m"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hrz-cp-2z1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="372" y="130"/>
+            <point key="canvasLocation" x="-311.19999999999999" y="129.98500749625188"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LLT-Gq-EIt">
@@ -81,7 +45,4 @@
             <point key="canvasLocation" x="-1010" y="130"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="xKM-0r-ev3"/>
-    </inferredMetricsTieBreakers>
 </document>
