@@ -19,10 +19,10 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>InteractiveSideMenu.xcscheme</key>
+		<key>InteractiveSideMenu.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
-			<false/>
+			<true/>
 		</dict>
 		<key>Pods-barcodeSuperApp.xcscheme</key>
 		<dict>
@@ -35,6 +35,11 @@
 			<false/>
 		</dict>
 		<key>RealmSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SideMenuSwift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
