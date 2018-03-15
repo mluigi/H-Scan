@@ -5,6 +5,7 @@
 //  Created by Luigi Marrandino on 12/03/18.
 //  Copyright © 2018 Luigi Marrandino. All rights reserved.
 //
+
 import RealmSwift
 import UIKit
 import Realm
@@ -13,31 +14,23 @@ import BarcodeScanner
 let DB = try! Realm()
 
 class ViewController: UIViewController {
-    @IBOutlet weak var tfNome: UITextField!
-    @IBOutlet weak var tfCognome: UITextField!
     @IBOutlet weak var lBarcode: UILabel!
     var lastCode = ""
-    
+
     @IBAction func scan(_ sender: Any) {
         let photoController = makeBarcodeScannerViewController()
         photoController.title = "Scanner"
         present(photoController, animated: true, completion: nil)
     }
-    
+
     private func makeBarcodeScannerViewController() -> BarcodeScannerViewController {
         let viewController = BarcodeScannerViewController()
         viewController.isOneTimeSearch = true
+        viewController.headerViewController.closeButton.isHidden = true
         viewController.codeDelegate = self
         viewController.errorDelegate = self
         viewController.dismissalDelegate = self
         return viewController
-    }
-    @IBAction func add(_ sender: Any) {
-        try! DB.write {
-            DB.add(Persona.init(nome: tfNome.text ?? "", cognome: tfCognome.text ?? ""))
-        }
-        tfNome.text = ""
-        tfCognome.text = ""
     }
 }
 

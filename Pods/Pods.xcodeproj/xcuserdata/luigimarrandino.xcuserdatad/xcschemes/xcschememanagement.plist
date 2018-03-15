@@ -4,49 +4,49 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>BarcodeScanner-BarcodeScanner.xcscheme</key>
+		<key>BarcodeScanner-BarcodeScanner.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>BarcodeScanner-Localization.xcscheme</key>
+		<key>BarcodeScanner-Localization.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
-		<key>BarcodeScanner.xcscheme</key>
+		<key>BarcodeScanner.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>Pods-barcodeSuperApp.xcscheme</key>
+		<key>Pods-barcodeSuperApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
-		<key>Realm.xcscheme</key>
+		<key>Realm.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
-		<key>RealmSwift.xcscheme</key>
+		<key>RealmSwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
 			<integer>5</integer>
 		</dict>
-		<key>SideMenuSwift.xcscheme</key>
+		<key>SideMenuSwift.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>isShown</key>
 			<false/>

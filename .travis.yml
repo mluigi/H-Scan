@@ -1,0 +1,4 @@
+
+language: objective-c
+xcode_workspace: barcodeSuperApp.xcworkspace 
+xcode_scheme: MyNewProjectTests
