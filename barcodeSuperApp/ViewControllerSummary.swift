@@ -13,11 +13,10 @@ class ViewControllerSummary: UIViewController {
 
     @IBOutlet var subView2: UIView!
     
+   
     @IBOutlet var circleGraphEsterno: CircleGraphView!
     
     @IBOutlet var circleGraphInterno: CircleGraphView!
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +28,10 @@ class ViewControllerSummary: UIViewController {
         
         
         let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
-        circleGraph.arcBackgroundColor = backgroundTrackColor
-        circleGraph.endArc = CGFloat(0.8)
+        circleGraphEsterno.arcBackgroundColor = backgroundTrackColor
+        circleGraphEsterno.endArc = CGFloat(0.8)
+        
+        
         
         let backgroundTrackColorInterno = UIColor(white: 0.15, alpha: 0.05)
         circleGraphInterno.arcBackgroundColor  = backgroundTrackColorInterno
