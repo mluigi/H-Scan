@@ -6,16 +6,12 @@
 //  Copyright © 2018 Luigi Marrandino. All rights reserved.
 //
 
-import RealmSwift
 import UIKit
-import Realm
 import BarcodeScanner
 import InteractiveSideMenu
 
-let DB = try! Realm()
-
 class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         messageViewController.textLabel.text = "Inquadra il codice a barre"
@@ -32,6 +28,7 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
 extension BarcodeViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         print(code)
+        resetWithError()
     }
 }
 
