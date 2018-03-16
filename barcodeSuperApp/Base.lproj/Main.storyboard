@@ -77,7 +77,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUi-p7-Zk1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-703" y="2217"/>
+            <point key="canvasLocation" x="-703" y="2202"/>
         </scene>
         <!--Barcode Menu View Controller-->
         <scene sceneID="syw-gY-q0G">

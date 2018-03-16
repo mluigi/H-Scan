@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07201816205BB36B00071B9C /* RecentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07201815205BB36B00071B9C /* RecentViewController.swift */; };
+		07201818205BB38300071B9C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07201817205BB38300071B9C /* ProfileViewController.swift */; };
 		0738B77B205A5F0D00A7E227 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0738B77A205A5F0D00A7E227 /* .travis.yml */; };
 		0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738B77C205A909B00A7E227 /* HostViewController.swift */; };
 		07C328A22056B562005D042E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C328A12056B562005D042E /* AppDelegate.swift */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		07201815205BB36B00071B9C /* RecentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentViewController.swift; sourceTree = "<group>"; };
+		07201817205BB38300071B9C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		0738B77A205A5F0D00A7E227 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		0738B77C205A909B00A7E227 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		07C3289E2056B562005D042E /* barcodeSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -76,6 +80,8 @@
 				0738B77C205A909B00A7E227 /* HostViewController.swift */,
 				07CEB956205AB3F8006B3ED6 /* BarcodeMenuViewController.swift */,
 				07CEB95E205AD535006B3ED6 /* BarcodeMenuCell.swift */,
+				07201815205BB36B00071B9C /* RecentViewController.swift */,
+				07201817205BB38300071B9C /* ProfileViewController.swift */,
 				07C328A82056B562005D042E /* Assets.xcassets */,
 				07C328AA2056B562005D042E /* LaunchScreen.storyboard */,
 				07C328AD2056B562005D042E /* Info.plist */,
@@ -239,6 +245,8 @@
 				07C328A42056B562005D042E /* BarcodeViewController.swift in Sources */,
 				07CEB95F205AD535006B3ED6 /* BarcodeMenuCell.swift in Sources */,
 				07C328A22056B562005D042E /* AppDelegate.swift in Sources */,
+				07201816205BB36B00071B9C /* RecentViewController.swift in Sources */,
+				07201818205BB38300071B9C /* ProfileViewController.swift in Sources */,
 				07CEB957205AB3F8006B3ED6 /* BarcodeMenuViewController.swift in Sources */,
 				0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */,
 			);
