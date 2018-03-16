@@ -13,7 +13,6 @@ class ViewControllerSummary: UIViewController {
 
     @IBOutlet var subView2: UIView!
     
-   
     @IBOutlet var circleGraphEsterno: CircleGraphView!
     
     @IBOutlet var circleGraphInterno: CircleGraphView!
