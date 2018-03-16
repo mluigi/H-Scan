@@ -1,23 +1,15 @@
 PODS:
   - BarcodeScanner (4.1.3)
   - InteractiveSideMenu (2.3)
-  - Realm (3.2.0):
-    - Realm/Headers (= 3.2.0)
-  - Realm/Headers (3.2.0)
-  - RealmSwift (3.2.0):
-    - Realm (= 3.2.0)
 
 DEPENDENCIES:
   - BarcodeScanner
   - InteractiveSideMenu
-  - RealmSwift
 
 SPEC CHECKSUMS:
   BarcodeScanner: fce1ad2b3f28286b1ab5091fe0979789618bee27
   InteractiveSideMenu: d503a508c6d62a4d5d4372d9fb9e1795637a8e45
-  Realm: ae552b9b9eca3a12374a589fa842f220e286a80a
-  RealmSwift: 05727129547dcab3fe828bd87bc30be903736b9c
 
-PODFILE CHECKSUM: 24f25fe6c4d811f58239fd9d7375c731cac9ea02
+PODFILE CHECKSUM: ce67997f0b9f4349d14b4bcff35b023466a6c786
 
 COCOAPODS: 1.4.0
