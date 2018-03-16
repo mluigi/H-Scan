@@ -9,8 +9,9 @@
 
 import UIKit
 import RealmSwift
+import Realm
 
-class Product : Object {
+class Product: Object {
     var name: String
     var image: UIImage
     var calories: Int
@@ -24,8 +25,21 @@ class Product : Object {
         self.calories = calories
         self.pieces = pieces
         self.nutritionalProprieties = nutritionalProprieties
+        super.init()
     }
-
+    
+    required init(realm: RLMRealm, schema: RLMObjectSchema) {
+        fatalError("init(realm:schema:) has not been implemented")
+    }
+    
+    required init() {
+        fatalError("init() has not been implemented")
+    }
+    
+    required init(value: Any, schema: RLMSchema) {
+        fatalError("init(value:schema:) has not been implemented")
+    }
+    
 }
 
 var MilkaChocoBrownie = Product(name: "Milka Choco Brownie", image: #imageLiteral(resourceName:"milkaChocoBrownie"), calories: 118 * 2, pieces: 2, nutritionalProprieties: nil)
