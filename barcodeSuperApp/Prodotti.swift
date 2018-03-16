@@ -10,8 +10,8 @@
 import UIKit
 
 class Product {
-    var name: String! = ""
-    var image: UIImage!
+    var name: String = ""
+    var image: UIImage
     var calories: Int = 0
     var pieces: Int = 0
     var nutritionalProprieties: String?
