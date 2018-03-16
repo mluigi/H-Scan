@@ -23,8 +23,6 @@ class HostViewController: MenuContainerViewController {
         self.contentViewControllers = contentControllers()
 
         self.selectContentViewController(contentViewControllers.first!)
-        
-
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -45,9 +43,8 @@ class HostViewController: MenuContainerViewController {
 
     private func contentControllers() -> [UIViewController] {
         return [
-            // TODO: Aggiungere views nella Main.storyboard con questi identifier
             (self.storyboard?.instantiateViewController(withIdentifier: "NavigationBarcodeViewController"))!,
-            (self.storyboard?.instantiateViewController(withIdentifier: "ProductHistoryViewController"))!,
+            (self.storyboard?.instantiateViewController(withIdentifier: "NavigationRecentViewController"))!,
             (self.storyboard?.instantiateViewController(withIdentifier: "ProfileViewController"))!
         ]
     }

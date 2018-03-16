@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import InteractiveSideMenu
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, SideMenuItemContent {
 
     override func viewDidLoad() {
         super.viewDidLoad()

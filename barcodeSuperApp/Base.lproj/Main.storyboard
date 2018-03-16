@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-2145" y="143"/>
         </scene>
-        <!--Barcode View Controller-->
+        <!--Scan-->
         <scene sceneID="5xD-aV-8H9">
             <objects>
                 <viewController id="Gg3-qn-V23" customClass="BarcodeViewController" customModule="barcodeSuperApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -35,10 +35,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="E5X-3z-h5L"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Vwo-V4-v09" appends="YES" id="cZJ-gR-DOu"/>
+                        </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="lhB-xV-AfQ">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="B2c-Iw-WrB">
+                    <navigationItem key="navigationItem" title="Scan" id="lhB-xV-AfQ">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="B2c-Iw-WrB">
                             <connections>
                                 <action selector="openMenu:" destination="Gg3-qn-V23" id="xQ7-xC-9g5"/>
                             </connections>
@@ -46,28 +50,102 @@
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rjF-e5-cAb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Vwo-V4-v09">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="openMenu:" destination="Gg3-qn-V23" id="M2S-wF-8cO"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-703" y="831"/>
         </scene>
         <!--Recent Scanned Products-->
         <scene sceneID="lvi-Uh-uFP">
             <objects>
-                <viewController storyboardIdentifier="ProductHistoryViewController" title="Recent Scanned Products" id="KO1-tE-rR8" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RecentViewController" title="Recent Scanned Products" id="KO1-tE-rR8" customClass="RecentViewController" customModule="barcodeSuperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ik3-h1-0QH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cBz-sr-gdP">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="x9Y-Lh-0qP" detailTextLabel="QP9-JH-2av" style="IBUITableViewCellStyleSubtitle" id="wtI-cv-gZW">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wtI-cv-gZW" id="OTq-28-jaa">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="x9Y-Lh-0qP">
+                                                    <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QP9-JH-2av">
+                                                    <rect key="frame" x="15" y="25.5" width="33" height="14.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="fBk-ZG-SaS" kind="show" id="ASr-vy-eMd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="jnA-5h-YAm"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="QHf-Vi-HKz" appends="YES" id="CXD-nk-QnV"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Recent" id="5P3-aU-egw">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="4Jf-yr-BxN">
+                            <connections>
+                                <action selector="openMenu:" destination="KO1-tE-rR8" id="MYP-S2-cwS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeY-zl-TPD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="QHf-Vi-HKz">
+                    <rectEdge key="edges" left="YES"/>
+                    <connections>
+                        <action selector="openMenu:" destination="KO1-tE-rR8" id="aPo-T1-TFr"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-703" y="1518"/>
+            <point key="canvasLocation" x="-703.20000000000005" y="1517.9910044977512"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Uus-Lu-0ZC">
+            <objects>
+                <viewController id="fBk-ZG-SaS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="shV-t7-YIm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jtm-fh-X30"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ULL-2u-Kh7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="1518"/>
         </scene>
         <!--Profile-->
         <scene sceneID="ESt-OT-p5r">
             <objects>
-                <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="G3a-bJ-kNr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileViewController" title="Profile" id="G3a-bJ-kNr" customClass="ProfileViewController" customModule="barcodeSuperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JRB-fK-3QZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,6 +267,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LTm-2o-qSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1424" y="831.18440779610205"/>
+        </scene>
+        <!--Recent Products-->
+        <scene sceneID="NdN-Bw-bSA">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationRecentViewController" title="Recent Products" automaticallyAdjustsScrollViewInsets="NO" id="vUc-jE-mgJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F0B-qW-7D1">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="KO1-tE-rR8" kind="relationship" relationship="rootViewController" id="jJI-fI-fA5"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H8w-Or-C8m" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1425" y="1518"/>
         </scene>
     </scenes>
 </document>

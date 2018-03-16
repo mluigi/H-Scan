@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import InteractiveSideMenu
 
-class RecentViewController: UIViewController {
+class RecentViewController: UIViewController, SideMenuItemContent {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,8 +21,12 @@ class RecentViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
+    @IBAction func openMenu(_ sender: Any) {
+        showSideMenu()
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -31,5 +36,15 @@ class RecentViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
 
+extension RecentViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
+    }
 }
