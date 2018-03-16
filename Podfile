@@ -7,6 +7,5 @@ target 'barcodeSuperApp' do
 
   # Pods for barcodeSuperApp
   pod 'BarcodeScanner'
-  pod 'RealmSwift'
   pod 'InteractiveSideMenu'
 end
