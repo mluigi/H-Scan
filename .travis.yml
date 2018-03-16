@@ -1,0 +1,11 @@
+
+language: objective-c
+xcode_workspace: barcodeSuperApp.xcworkspace 
+xcode_scheme: barcodeSuperApp
+osx_image: xcode9.2
+
+install: 
+- pod install --repo-update
+
+script:
+- xcodebuild clean build -sdk iphonesimulator -workspace barcodeSuperApp.xcworkspace -scheme barcodeSuperApp CODE_SIGNING_REQUIRED=NO
