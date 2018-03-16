@@ -22,7 +22,7 @@
 		3D598D32E78B2CB423069A2C /* Pods_barcodeSuperApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA99F633C6040B2B569786B /* Pods_barcodeSuperApp.framework */; };
 		DAAC1514205BE03300B5BEA0 /* Prodotti.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC1512205BE03200B5BEA0 /* Prodotti.swift */; };
 		DAAC1515205BE03300B5BEA0 /* ViewControllerSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC1513205BE03200B5BEA0 /* ViewControllerSummary.swift */; };
-		DAAC1517205BE05000B5BEA0 /* CircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC1516205BE05000B5BEA0 /* CircleGraphView.swift */; };
+		DAAC1519205BE10100B5BEA0 /* CircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAAC1518205BE10100B5BEA0 /* CircleGraphView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,7 +44,7 @@
 		654B7547DC52F4D82168A7D8 /* Pods-barcodeSuperApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcodeSuperApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-barcodeSuperApp/Pods-barcodeSuperApp.release.xcconfig"; sourceTree = "<group>"; };
 		DAAC1512205BE03200B5BEA0 /* Prodotti.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prodotti.swift; sourceTree = "<group>"; };
 		DAAC1513205BE03200B5BEA0 /* ViewControllerSummary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSummary.swift; sourceTree = "<group>"; };
-		DAAC1516205BE05000B5BEA0 /* CircleGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircleGraphView.swift; path = ../../../Desktop/CircleGraphView.swift; sourceTree = "<group>"; };
+		DAAC1518205BE10100B5BEA0 /* CircleGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGraphView.swift; sourceTree = "<group>"; };
 		FD55D67DA56C23B82DB5AB0C /* Pods-barcodeSuperApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-barcodeSuperApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-barcodeSuperApp/Pods-barcodeSuperApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,7 +82,6 @@
 		07C328A02056B562005D042E /* barcodeSuperApp */ = {
 			isa = PBXGroup;
 			children = (
-				DAAC1516205BE05000B5BEA0 /* CircleGraphView.swift */,
 				07C328A12056B562005D042E /* AppDelegate.swift */,
 				077A5402205BBE960078D2DB /* ProductViewController.swift */,
 				07C328A32056B562005D042E /* BarcodeViewController.swift */,
@@ -91,6 +90,7 @@
 				DAAC1512205BE03200B5BEA0 /* Prodotti.swift */,
 				DAAC1513205BE03200B5BEA0 /* ViewControllerSummary.swift */,
 				07CEB956205AB3F8006B3ED6 /* BarcodeMenuViewController.swift */,
+				DAAC1518205BE10100B5BEA0 /* CircleGraphView.swift */,
 				07CEB95E205AD535006B3ED6 /* BarcodeMenuCell.swift */,
 				07201815205BB36B00071B9C /* RecentViewController.swift */,
 				07201817205BB38300071B9C /* ProfileViewController.swift */,
@@ -261,7 +261,7 @@
 				07201816205BB36B00071B9C /* RecentViewController.swift in Sources */,
 				07201818205BB38300071B9C /* ProfileViewController.swift in Sources */,
 				07CEB957205AB3F8006B3ED6 /* BarcodeMenuViewController.swift in Sources */,
-				DAAC1517205BE05000B5BEA0 /* CircleGraphView.swift in Sources */,
+				DAAC1519205BE10100B5BEA0 /* CircleGraphView.swift in Sources */,
 				077A5403205BBE960078D2DB /* ProductViewController.swift in Sources */,
 				0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */,
 				DAAC1515205BE03300B5BEA0 /* ViewControllerSummary.swift in Sources */,

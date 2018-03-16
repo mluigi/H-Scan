@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="izo-7h-N2e">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="v4e-fN-f7K">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -50,10 +50,10 @@
             </objects>
             <point key="canvasLocation" x="-694" y="831"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller Summary-->
         <scene sceneID="lSW-Ya-6IW">
             <objects>
-                <viewController id="v4e-fN-f7K" sceneMemberID="viewController">
+                <viewController id="v4e-fN-f7K" customClass="ViewControllerSummary" customModule="barcodeSuperApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5MK-KB-6qT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -111,10 +111,10 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="Alternative"/>
                                             </button>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-9P-WaU">
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VJL-9P-WaU" customClass="CircleGraphView" customModule="barcodeSuperApp" customModuleProvider="target">
                                                 <rect key="frame" x="79" y="51" width="216" height="221"/>
                                                 <subviews>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqu-Do-eT7">
+                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yqu-Do-eT7" customClass="CircleGraphView" customModule="barcodeSuperApp" customModuleProvider="target">
                                                         <rect key="frame" x="22" y="24" width="173" height="173"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     </view>
@@ -151,6 +151,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="H05-Fl-1iN"/>
                     </view>
+                    <connections>
+                        <outlet property="circleGraphEsterno" destination="VJL-9P-WaU" id="5f3-X6-ezP"/>
+                        <outlet property="circleGraphInterno" destination="yqu-Do-eT7" id="hmJ-tp-sVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gno-Z7-Mu0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
