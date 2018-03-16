@@ -25,23 +25,26 @@ class RecentViewController: UIViewController, SideMenuItemContent {
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
- 
+
 }
 
-extension RecentViewController : UITableViewDelegate, UITableViewDataSource {
-    
+extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        //return DB.objects(Product.self).count == 0 ? DB.objects(Product.self).count : 1
+        return dictionary.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
-//        let product = DB.objects(String.self)[indexPath.row]
+        //let product = DB.objects(Product.self)[indexPath.row]
+        let product = Array(dictionary.values)[indexPath.row]
+        cell.textLabel!.text = product.name
         return cell
     }
 }
