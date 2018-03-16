@@ -8,16 +8,13 @@
 
 
 import UIKit
-import RealmSwift
-import Realm
 
-class Product: Object {
-    var name: String
-    var image: UIImage
-    var calories: Int
-    var pieces: Int
+class Product {
+    var name: String! = ""
+    var image: UIImage!
+    var calories: Int = 0
+    var pieces: Int = 0
     var nutritionalProprieties: String?
-
 
     init(name: String, image: UIImage, calories: Int, pieces: Int, nutritionalProprieties: String?) {
         self.name = name
@@ -25,20 +22,9 @@ class Product: Object {
         self.calories = calories
         self.pieces = pieces
         self.nutritionalProprieties = nutritionalProprieties
-        super.init()
+        
     }
     
-    required init(realm: RLMRealm, schema: RLMObjectSchema) {
-        fatalError("init(realm:schema:) has not been implemented")
-    }
-    
-    required init() {
-        fatalError("init() has not been implemented")
-    }
-    
-    required init(value: Any, schema: RLMSchema) {
-        fatalError("init(value:schema:) has not been implemented")
-    }
     
 }
 
@@ -81,7 +67,7 @@ var dictionary: [Int: Product] = [
     8000500033715: KinderColazionePiù,
     8013355998665: Cerealix,
     8014037008634: Buondi,
-    8014037008634: KinderDelice,
+    8000500267103: KinderDelice,
     8076809516655: CrackersIntegraliMulinoBianco
 ]
 

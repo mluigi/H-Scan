@@ -37,6 +37,7 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //return DB.objects(Product.self).count == 0 ? DB.objects(Product.self).count : 1
+        print(dictionary.count)
         return dictionary.count
     }
 
@@ -44,6 +45,7 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
         //let product = DB.objects(Product.self)[indexPath.row]
         let product = Array(dictionary.values)[indexPath.row]
+        print(product.name)
         cell.textLabel!.text = product.name
         return cell
     }
