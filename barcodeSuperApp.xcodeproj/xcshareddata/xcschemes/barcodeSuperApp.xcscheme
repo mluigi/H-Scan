@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -97,7 +98,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E85ADA5B65974786F3C610D150D8C0CA"
+               BlueprintIdentifier = "7F6030F784B120E8291E5D095C69251B"
                BuildableName = "Pods_barcodeSuperApp.framework"
                BlueprintName = "Pods-barcodeSuperApp"
                ReferencedContainer = "container:Pods/Pods.xcodeproj">
