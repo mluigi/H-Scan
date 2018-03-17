@@ -25,12 +25,9 @@ class ViewControllerSummary: UIViewController {
         
         //Inizializzazione dei cerchi
         
-        
         let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
         circleGraphEsterno.arcBackgroundColor = backgroundTrackColor
         circleGraphEsterno.endArc = CGFloat(0.8)
-        
-        
         
         let backgroundTrackColorInterno = UIColor(white: 0.15, alpha: 0.05)
         circleGraphInterno.arcBackgroundColor  = backgroundTrackColorInterno
@@ -42,8 +39,6 @@ class ViewControllerSummary: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.

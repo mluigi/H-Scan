@@ -11,6 +11,7 @@ import InteractiveSideMenu
 
 class RecentViewController: UIViewController, SideMenuItemContent {
 
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,19 +35,39 @@ class RecentViewController: UIViewController, SideMenuItemContent {
 }
 
 extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
-
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        if 1==1 {
+            return 1
+        } else {
+            emptyMessage(message: "You haven't scanned any product.", viewController: self)
+            return 0
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return DB.objects(Product.self).count == 0 ? DB.objects(Product.self).count : 1
         print(dictionary.count)
         return dictionary.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
-        //let product = DB.objects(Product.self)[indexPath.row]
         let product = Array(dictionary.values)[indexPath.row]
         print(product.name)
         cell.textLabel!.text = product.name
         return cell
+    }
+    
+    func emptyMessage(message:String, viewController:RecentViewController) {
+        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+        let messageLabel = UILabel(frame: rect)
+        messageLabel.text = message
+        messageLabel.textColor = .black
+        messageLabel.numberOfLines = 0;
+        messageLabel.textAlignment = .center;
+        messageLabel.sizeToFit()
+        
+        viewController.tableView.backgroundView = messageLabel;
+        viewController.tableView.separatorStyle = .none;
     }
 }

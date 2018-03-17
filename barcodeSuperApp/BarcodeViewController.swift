@@ -11,6 +11,7 @@ import BarcodeScanner
 import InteractiveSideMenu
 
 class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
+    var lastCode = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +24,18 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination
+        
+    }
 }
 
 extension BarcodeViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
-        print(code)
+        lastCode = code
         resetWithError()
+        messageViewController.textLabel.text = "Inquadra il codice a barre"
     }
 }
 
