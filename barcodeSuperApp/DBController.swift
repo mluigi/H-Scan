@@ -9,15 +9,22 @@
 import UIKit
 
 let DB = UserDefaults()
+let recentProds = "recentProducts"
 
 extension UserDefaults {
     func saveProduct(product: Product) {
-        var products = array(forKey: "recentProducts") ?? [Product]()
-        products.append(product)
-        set(products, forKey: "recentProducts")
+        var products = (array(forKey: recentProds) as? [Product]) ?? [Product]()
+        if products.contains(where: {
+            $0.name == product.name
+        }) {
+            products.filter{$0.name == product.name}.first!.count += 1
+        } else {
+            products.append(product)
+        }
+        set(products, forKey: recentProds)
     }
     
     func recentProducts() -> [Product] {
-        return array(forKey: "recentProducts") as! [Product]
+        return array(forKey: recentProds) as! [Product]
     }
  }

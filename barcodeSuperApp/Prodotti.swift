@@ -15,6 +15,7 @@ class Product {
     var calories: Int = 0
     var pieces: Int = 0
     var nutritionalProprieties: String?
+    var count = 0
 
     init(name: String, image: UIImage, calories: Int, pieces: Int, nutritionalProprieties: String?) {
         self.name = name
