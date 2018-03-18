@@ -17,31 +17,37 @@ class Product {
     var nutritionalProprieties: String?
     var count = 0
 
+    init(name: String, image: UIImage, calories: Int, pieces: Int) {
+        self.name = name
+        self.image = image
+        self.calories = calories
+        self.pieces = pieces
+    }
+    
     init(name: String, image: UIImage, calories: Int, pieces: Int, nutritionalProprieties: String?) {
         self.name = name
         self.image = image
         self.calories = calories
         self.pieces = pieces
         self.nutritionalProprieties = nutritionalProprieties
-        
     }
     
     
 }
 
-var MilkaChocoBrownie = Product(name: "Milka Choco Brownie", image: #imageLiteral(resourceName:"milkaChocoBrownie"), calories: 118, pieces: 2, nutritionalProprieties: nil)
-var KinderBueno = Product(name: "Kinder Bueno", image: #imageLiteral(resourceName:"kinderBueno"), calories: 122, pieces: 2, nutritionalProprieties: nil)
-var KinderCereali = Product(name: "barretta Kinder Cereali", image: #imageLiteral(resourceName:"kinderCereali"), calories: 132, pieces: 1, nutritionalProprieties: nil)
-var KitKat = Product(name: "Kit-Kat", image: #imageLiteral(resourceName:"kitkat"), calories: 209, pieces: 4, nutritionalProprieties: nil)
-var Bounty = Product(name: "bounty", image: #imageLiteral(resourceName:"bounty"), calories: 139, pieces: 2, nutritionalProprieties: nil)
-var Mars = Product(name: "Mars", image: #imageLiteral(resourceName:"mars"), calories: 182, pieces: 1, nutritionalProprieties: nil)
-var Snickers = Product(name: "Snickers", image: #imageLiteral(resourceName:"snickers"), calories: 256, pieces: 1, nutritionalProprieties: nil)
+var MilkaChocoBrownie = Product(name: "Milka Choco Brownie", image: #imageLiteral(resourceName:"milkaChocoBrownie"), calories: 118, pieces: 2)
+var KinderBueno = Product(name: "Kinder Bueno", image: #imageLiteral(resourceName:"kinderBueno"), calories: 122, pieces: 2)
+var KinderCereali = Product(name: "barretta Kinder Cereali", image: #imageLiteral(resourceName:"kinderCereali"), calories: 132, pieces: 1)
+var KitKat = Product(name: "Kit-Kat", image: #imageLiteral(resourceName:"kitkat"), calories: 209, pieces: 4)
+var Bounty = Product(name: "bounty", image: #imageLiteral(resourceName:"bounty"), calories: 139, pieces: 2)
+var Mars = Product(name: "Mars", image: #imageLiteral(resourceName:"mars"), calories: 182, pieces: 1)
+var Snickers = Product(name: "Snickers", image: #imageLiteral(resourceName:"snickers"), calories: 256, pieces: 1)
 var KinderColazionePiù = Product(name: "Kinder Colazione Più (pack of 10 pieces)"
-        , image: #imageLiteral(resourceName:"kindercolazionepiu"), calories: 122, pieces: 1, nutritionalProprieties: nil)
-var Cerealix = Product(name: "Cerealix", image: #imageLiteral(resourceName:"cerealix"), calories: 96, pieces: 8, nutritionalProprieties: nil)
-var Buondi = Product(name:"Buondi Cioccolato", image: #imageLiteral(resourceName: "buondi"), calories: 126, pieces: 6, nutritionalProprieties: nil)
-var KinderDelice = Product(name: "Kinder Delice", image: #imageLiteral(resourceName: "kinderDelice"), calories: 185, pieces: 10, nutritionalProprieties: nil)
-var CrackersIntegraliMulinoBianco = Product(name: "Crackers Integrali Mulino Bianco", image: #imageLiteral(resourceName: "crackers"), calories: 104, pieces: 20, nutritionalProprieties: nil)
+        , image: #imageLiteral(resourceName:"kindercolazionepiu"), calories: 122, pieces: 1)
+var Cerealix = Product(name: "Cerealix", image: #imageLiteral(resourceName:"cerealix"), calories: 96, pieces: 8)
+var Buondi = Product(name:"Buondi Cioccolato", image: #imageLiteral(resourceName: "buondi"), calories: 126, pieces: 6)
+var KinderDelice = Product(name: "Kinder Delice", image: #imageLiteral(resourceName: "kinderDelice"), calories: 185, pieces: 10)
+var CrackersIntegraliMulinoBianco = Product(name: "Crackers Integrali Mulino Bianco", image: #imageLiteral(resourceName: "crackers"), calories: 104, pieces: 20)
 
 
 
