@@ -57,19 +57,19 @@ var Orange = Product(name: "Orange", image: #imageLiteral(resourceName:"arancia"
 
 var alternatives = [Apple, Pear, Orange]
 
-var dictionary: [Int: Product] = [
-    7622210788078: MilkaChocoBrownie,
-    80052760: KinderBueno,
-    80310266: KinderCereali,
-    7613035220065: KitKat, //non sicuro
-    40111216: Bounty, //non sicuro
-    5000159407236: Mars,
-    5000159461122: Snickers,
-    8000500033715: KinderColazionePiù,
-    8013355998665: Cerealix,
-    8014037008634: Buondi,
-    8000500267103: KinderDelice,
-    8076809516655: CrackersIntegraliMulinoBianco
+var dictionary: [String: Product] = [
+    "7622210788078": MilkaChocoBrownie,
+    "80052760": KinderBueno,
+    "80310266": KinderCereali,
+    "7613035220065": KitKat, //non sicuro
+    "40111216": Bounty, //non sicuro
+    "5000159407236": Mars,
+    "5000159461122": Snickers,
+    "8000500033715": KinderColazionePiù,
+    "8013355998665": Cerealix,
+    "8014037008634": Buondi,
+    "8000500267103": KinderDelice,
+    "8076809516655": CrackersIntegraliMulinoBianco
 ]
 
 

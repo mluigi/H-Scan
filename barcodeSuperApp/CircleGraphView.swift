@@ -10,9 +10,8 @@ import UIKit
 
 class CircleGraphView: UIView {
 
-    var endArc:CGFloat = 0.0{   // in range of 0.0 to 1.0
+    var endArc:CGFloat = 0.0 {   // in range of 0.0 to 1.0
         didSet{
-            
             setNeedsDisplay()
         }
     }
@@ -25,10 +24,7 @@ class CircleGraphView: UIView {
         // Drawing code
         
         //var endArc:CGFloat = 0.0 // in range of 0.0 to 1.0
-        
-       
-        
-        
+
         //Important constants for circle
         let fullCircle = 2.0 * CGFloat(Double.pi)
         let start:CGFloat = -0.25 * fullCircle
@@ -86,12 +82,5 @@ class CircleGraphView: UIView {
         
         context?.addArc(center: center, radius: radius, startAngle: start, endAngle: end, clockwise: false)
         context?.strokePath()
-        
-        
-        
-        
-        
     }
-    
-
 }
