@@ -12,9 +12,7 @@ import HealthKit
 import HealthKitUI
 
 //let hkStore = HKHealthStore()
-let healthKitStore:HKHealthStore = HKHealthStore()
-
-let healthKitActivitySummary = HKActivitySummary()
+let hkStore:HKHealthStore = HKHealthStore()
 
 let healthKitTypesToRead : Set<HKObjectType> = [
     HKSampleType.quantityType(forIdentifier: .height)!,
@@ -33,116 +31,122 @@ let healthKitTypesToWrite: Set<HKSampleType> = [
 
 
 class ProfileViewController: UIViewController, SideMenuItemContent {
-
+    @IBOutlet weak var lHeight: UILabel!
+    @IBOutlet weak var lWeight: UILabel!
+    @IBOutlet weak var lSex: UILabel!
+    @IBOutlet weak var lAge: UILabel!
+    var weight = 0.0
+    var height = 0.0
+    var age = 0
+    var sex = 0
+    
+    var permissionsAcquired = false
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        requestPermissions()
         
-        updateHeight()
-        updateWeight()
-        updateSex()
-        //birthDate.text = String(getAge())
-        
-        
-        func updateHeight() {
-            let heightSample = HKSampleType.quantityType(forIdentifier: .height)
-            getMostRecentSample(for: heightSample!, completion: { (sample, error) in
-                guard let sample = sample else {
-                    if let error = error {
-                        print("error")
-                    }
-                    return
-                }
-                
-                self.height.text = String(sample.quantity.doubleValue(for: HKUnit.meter()))
-            })
+        DispatchQueue.global(qos: .background).async {
+            while !self.permissionsAcquired{}
+            
+            self.updateHeight()
+            self.updateWeight()
+            self.updateSex()
+            self.lAge.text = String(self.getAge())
         }
         
-        func updateWeight() {
-            let weightSample = HKSampleType.quantityType(forIdentifier: .bodyMass)
-            getMostRecentSample(for: weightSample!, completion: { (sample, error) in
-                guard let sample = sample else {
-                    if let error = error {
-                        print("error")
-                    }
-                    return
-                }
-                
-                self.weight.text = String(sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo)))
-            })
-            
-        }
-        
-        func updateSex() {
-            let sex = try! healthKitStore.biologicalSex().biologicalSex.rawValue
-            switch sex {
-            case 1:
-                self.sex.text = "Female"
-            case 2:
-                self.sex.text = "Male"
-            default:
-                self.sex.text = "BOOOOOH"
-            }
-        }
-        
-        func getAge()->Int {
-            let date = try! healthKitStore.dateOfBirthComponents()
-            let today = Calendar.current.dateComponents([.year, .month, .day], from: Date())
-            var age = today.year! - date.year!
-            if today.month! <= date.month! && today.day! < date.day! {
-                age -= 1
-            }
-            
-            return age
-        }
-        
-        
-        func getMostRecentSample(for sampleType: HKSampleType,
-                                 completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
-            
-            //1. Use HKQuery to load the most recent samples.
-            let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
-                                                                  end: Date(),
-                                                                  options: .strictEndDate)
-            
-            let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
-                                                  ascending: false)
-            
-            let limit = 1
-            
-            let sampleQuery = HKSampleQuery(sampleType: sampleType,
-                                            predicate: mostRecentPredicate,
-                                            limit: limit,
-                                            sortDescriptors: [sortDescriptor]) { (query, samples, error) in
-                                                
-                                                //2. Always dispatch to the main thread when complete.
-                                                DispatchQueue.main.async {
-                                                    
-                                                    guard let samples = samples,
-                                                        let mostRecentSample = samples.first as? HKQuantitySample else {
-                                                            
-                                                            completion(nil, error)
-                                                            return
-                                                    }
-                                                    
-                                                    completion(mostRecentSample, nil)
-                                                }
-            }
-            
-            HKHealthStore().execute(sampleQuery)
-        }
 
-        
-        
+    }
+    
+    func updateHeight() {
+        let heightSample = HKSampleType.quantityType(forIdentifier: .height)
+        getMostRecentSample(for: heightSample!, completion: { (sample, error) in
+            guard let sample = sample else {
+                if let error = error {
+                    print("error")
+                }
+                return
+            }
+            self.height = sample.quantity.doubleValue(for: HKUnit.meter())
+            self.lHeight.text = String(self.height)
+        })
+    }
+    
+    func updateWeight() {
+        let weightSample = HKSampleType.quantityType(forIdentifier: .bodyMass)
+        getMostRecentSample(for: weightSample!, completion: { (sample, error) in
+            guard let sample = sample else {
+                if let error = error {
+                    print("error")
+                }
+                return
+            }
+            self.weight = sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo))
+            self.lWeight.text = String(self.weight)
+        })
         
     }
     
+    func updateSex() {
+        let sex = try! hkStore.biologicalSex().biologicalSex.rawValue
+        switch sex {
+        case 1:
+            self.lSex.text = "Female"
+        case 2:
+            self.lSex.text = "Male"
+        default:
+            self.lSex.text = "BOOOOOH"
+        }
+    }
+    
+    func getAge()->Int {
+        let date = try! hkStore.dateOfBirthComponents()
+        let today = Calendar.current.dateComponents([.year, .month, .day], from: Date())
+        var age = today.year! - date.year!
+        if today.month! <= date.month! && today.day! < date.day! {
+            age -= 1
+        }
+        
+        return age
+    }
     
     
+    func getMostRecentSample(for sampleType: HKSampleType,
+                             completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
+        
+        //1. Use HKQuery to load the most recent samples.
+        let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
+                                                              end: Date(),
+                                                              options: .strictEndDate)
+        
+        let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
+                                              ascending: false)
+        
+        let limit = 1
+        
+        let sampleQuery = HKSampleQuery(sampleType: sampleType,
+                                        predicate: mostRecentPredicate,
+                                        limit: limit,
+                                        sortDescriptors: [sortDescriptor]) { (query, samples, error) in
+                                            
+                                            //2. Always dispatch to the main thread when complete.
+                                            DispatchQueue.main.async {
+                                                
+                                                guard let samples = samples,
+                                                    let mostRecentSample = samples.first as? HKQuantitySample else {
+                                                        
+                                                        completion(nil, error)
+                                                        return
+                                                }
+                                                
+                                                completion(mostRecentSample, nil)
+                                            }
+        }
+        
+        HKHealthStore().execute(sampleQuery)
+    }
 
-    
-    
-    
-    
     func requestPermissions(){
         
         if HKHealthStore.isHealthDataAvailable() {
@@ -152,19 +156,15 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             print("There is a problem accessing HealthKit")
         }
         
-        healthKitStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
+        hkStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
             if success {
                 print("success")
+                self.permissionsAcquired = true
             } else {
                 print("failed")
             }
         }
     }
-
-    
-    
-    
-    
     
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()

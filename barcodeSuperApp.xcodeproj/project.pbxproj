@@ -14,6 +14,8 @@
 		0738B77B205A5F0D00A7E227 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 0738B77A205A5F0D00A7E227 /* .travis.yml */; };
 		0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0738B77C205A909B00A7E227 /* HostViewController.swift */; };
 		077A540D205BE72B0078D2DB /* CircleGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077A540C205BE72A0078D2DB /* CircleGraphView.swift */; };
+		077BEEA2205FF6DF004957E0 /* Giornaliero.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BEEA0205FF6DF004957E0 /* Giornaliero.swift */; };
+		077BEEA3205FF6DF004957E0 /* ViewControllerAlternative.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077BEEA1205FF6DF004957E0 /* ViewControllerAlternative.swift */; };
 		07C328A22056B562005D042E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C328A12056B562005D042E /* AppDelegate.swift */; };
 		07C328A42056B562005D042E /* BarcodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C328A32056B562005D042E /* BarcodeViewController.swift */; };
 		07C328A72056B562005D042E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07C328A52056B562005D042E /* Main.storyboard */; };
@@ -35,6 +37,8 @@
 		0738B77A205A5F0D00A7E227 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; };
 		0738B77C205A909B00A7E227 /* HostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostViewController.swift; sourceTree = "<group>"; };
 		077A540C205BE72A0078D2DB /* CircleGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleGraphView.swift; sourceTree = "<group>"; };
+		077BEEA0205FF6DF004957E0 /* Giornaliero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Giornaliero.swift; sourceTree = "<group>"; };
+		077BEEA1205FF6DF004957E0 /* ViewControllerAlternative.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerAlternative.swift; sourceTree = "<group>"; };
 		07C3289E2056B562005D042E /* barcodeSuperApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = barcodeSuperApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07C328A12056B562005D042E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07C328A32056B562005D042E /* BarcodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarcodeViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +99,8 @@
 				DAAC1512205BE03200B5BEA0 /* Prodotti.swift */,
 				0724884C205D2B9B0071A7F8 /* DBController.swift */,
 				DAAC1513205BE03200B5BEA0 /* ViewControllerSummary.swift */,
+				077BEEA0205FF6DF004957E0 /* Giornaliero.swift */,
+				077BEEA1205FF6DF004957E0 /* ViewControllerAlternative.swift */,
 				07CEB956205AB3F8006B3ED6 /* BarcodeMenuViewController.swift */,
 				07CEB95E205AD535006B3ED6 /* BarcodeMenuCell.swift */,
 				07201815205BB36B00071B9C /* RecentViewController.swift */,
@@ -263,11 +269,13 @@
 			files = (
 				DAAC1514205BE03300B5BEA0 /* Prodotti.swift in Sources */,
 				07C328A42056B562005D042E /* BarcodeViewController.swift in Sources */,
+				077BEEA3205FF6DF004957E0 /* ViewControllerAlternative.swift in Sources */,
 				07CEB95F205AD535006B3ED6 /* BarcodeMenuCell.swift in Sources */,
 				07C328A22056B562005D042E /* AppDelegate.swift in Sources */,
 				07201816205BB36B00071B9C /* RecentViewController.swift in Sources */,
 				07201818205BB38300071B9C /* ProfileViewController.swift in Sources */,
 				07CEB957205AB3F8006B3ED6 /* BarcodeMenuViewController.swift in Sources */,
+				077BEEA2205FF6DF004957E0 /* Giornaliero.swift in Sources */,
 				077A540D205BE72B0078D2DB /* CircleGraphView.swift in Sources */,
 				0738B77D205A909B00A7E227 /* HostViewController.swift in Sources */,
 				0724884D205D2B9C0071A7F8 /* DBController.swift in Sources */,

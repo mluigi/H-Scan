@@ -1,50 +1,77 @@
 //
 //  ViewControllerSummary.swift
-//  barcodeSuperApp
+//  cerchi
 //
-//  Created by Davide Compagnone on 15/03/18.
-//  Copyright © 2018 Luigi Marrandino. All rights reserved.
+//  Created by Davide Compagnone on 16/03/18.
+//  Copyright © 2018 Davide Compagnone. All rights reserved.
 //
 
 import UIKit
-import HealthKit
 
 class ViewControllerSummary: UIViewController {
-
-    @IBOutlet var subView2: UIView!
+    
+    
+    //variabili
+    var caloriePersona  = calcoloCalorieGiornaliere()
+    var numSelezionati = 2
+    
+    @IBOutlet var labelNome: UILabel!
+    @IBOutlet var labelKcal: UILabel!
+    @IBOutlet var labelQuantita: UILabel!
+    @IBOutlet var image: UIImageView!
+    
     
     @IBOutlet var circleGraphEsterno: CircleGraphView!
-    
     @IBOutlet var circleGraphInterno: CircleGraphView!
+    
+    @IBOutlet var buttonEat: UIButton!
+    
+    @IBOutlet var slaier: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        //impostazione delle label
+        print(temp.name)
+        labelNome.text = temp!.name
+        labelKcal.text = String (temp!.calories)
+        labelQuantita.text = String (1)
+        image.image = temp!.image
+        
+        //impostazione dello slider
+        
+        slaier.setValue(Float(1), animated: false)
+        slaier.maximumValue = Float(temp!.pieces)
         
         
-        //Inizializzazione dei cerchi
+        
+        //impostazione dei cerchi
+        
+        circleGraphEsterno.arcWidth = 25
+        circleGraphInterno.arcWidth = 25
         
         let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
         circleGraphEsterno.arcBackgroundColor = backgroundTrackColor
-        circleGraphEsterno.endArc = CGFloat(0.8)
+       // circleGraphEsterno.arcColor = .#FFFF
+        circleGraphEsterno.endArc = CGFloat(calorieConsumate/caloriePersona)
         
         let backgroundTrackColorInterno = UIColor(white: 0.15, alpha: 0.05)
         circleGraphInterno.arcBackgroundColor  = backgroundTrackColorInterno
         circleGraphInterno.arcColor = .red
-        circleGraphInterno.endArc = CGFloat(0.6)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(temp!.calories)) / caloriePersona)
+        
+        // Do any additional setup after loading the view.
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func seleziona(_ sender: UISlider) {
+        
+        let quantita = sender.value
+        
+        labelQuantita.text  =  String (format: "%.1f", quantita)
+        labelKcal.text = String (format :  "%.1f" , sender.value * temp!.calories)
+        circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(temp!.calories*sender.value)) / caloriePersona)
+        
+        
     }
-    
-    
-    
 }

@@ -12,19 +12,19 @@ import UIKit
 class Product {
     var name: String = ""
     var image: UIImage
-    var calories: Int = 0
+    var calories: Float = 0
     var pieces: Int = 0
     var nutritionalProprieties: String?
     var count = 0
 
-    init(name: String, image: UIImage, calories: Int, pieces: Int) {
+    init(name: String, image: UIImage, calories: Float, pieces: Int) {
         self.name = name
         self.image = image
         self.calories = calories
         self.pieces = pieces
     }
     
-    init(name: String, image: UIImage, calories: Int, pieces: Int, nutritionalProprieties: String?) {
+    init(name: String, image: UIImage, calories: Float, pieces: Int, nutritionalProprieties: String?) {
         self.name = name
         self.image = image
         self.calories = calories
@@ -75,6 +75,10 @@ var dictionary: [String: Product] = [
     "8000500267103": KinderDelice,
     "8076809516655": CrackersIntegraliMulinoBianco
 ]
+
+
+
+var temp : Product!
 
 
 //func pickAnAlternative (_ alternatives:[Product]) -> [Product] {
