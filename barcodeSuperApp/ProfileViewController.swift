@@ -11,10 +11,14 @@ import InteractiveSideMenu
 import HealthKit
 import HealthKitUI
 
+let hkStore = HKHealthStore()
+
+
 class ProfileViewController: UIViewController, SideMenuItemContent {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {
