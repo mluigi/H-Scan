@@ -24,11 +24,6 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destination = segue.destination
-        
-    }
 }
 
 extension BarcodeViewController: BarcodeScannerCodeDelegate {
@@ -36,7 +31,8 @@ extension BarcodeViewController: BarcodeScannerCodeDelegate {
         lastCode = code
         if dictionary.contains(where: {$0.key == code}) {
             DB.saveProduct(lastCode)
-            //present(self.storyboard!.instantiateViewController(withIdentifier: "ProductViewController"), animated: true, completion: nil)
+            temp = dictionary[lastCode]!
+            self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "ProductViewController"), animated: true)
             resetWithError() 
         } else {
             resetWithError(message: "Product not found.")
