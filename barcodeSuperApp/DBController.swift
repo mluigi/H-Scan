@@ -12,19 +12,16 @@ let DB = UserDefaults()
 let recentProds = "recentProducts"
 
 extension UserDefaults {
-    func saveProduct(product: Product) {
-        var products = (array(forKey: recentProds) as? [Product]) ?? [Product]()
-        if products.contains(where: {
-            $0.name == product.name
-        }) {
-            products.filter{$0.name == product.name}.first!.count += 1
-        } else {
-            products.append(product)
+    func saveProduct(_ barcode: String) {
+        var products = recentProducts() ?? [String]()
+        if !products.contains(barcode) {
+            products.append(barcode)
         }
         set(products, forKey: recentProds)
+        synchronize()
     }
     
-    func recentProducts() -> [Product] {
-        return array(forKey: recentProds) as! [Product]
+    func recentProducts() -> [String]? {
+        return array(forKey: recentProds) as! [String]?
     }
  }

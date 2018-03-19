@@ -37,7 +37,7 @@ class RecentViewController: UIViewController, SideMenuItemContent {
 extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if !DB.recentProducts().isEmpty {
+        if !DB.recentProducts()!.isEmpty {
             return 1
         } else {
             emptyMessage(message: "You haven't scanned any product.", viewController: self)
@@ -46,12 +46,12 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DB.recentProducts().count
+        return DB.recentProducts()!.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
-        let product = DB.recentProducts()[indexPath.row]
+        let product = dictionary[DB.recentProducts()![indexPath.row]]!
         cell.textLabel!.text = product.name
         return cell
     }

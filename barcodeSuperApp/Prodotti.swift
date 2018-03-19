@@ -31,8 +31,6 @@ class Product {
         self.pieces = pieces
         self.nutritionalProprieties = nutritionalProprieties
     }
-    
-    
 }
 
 var MilkaChocoBrownie = Product(name: "Milka Choco Brownie", image: #imageLiteral(resourceName:"milkaChocoBrownie"), calories: 118, pieces: 2)
