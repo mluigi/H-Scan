@@ -20,10 +20,6 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
         super.viewDidLoad()
         
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-    }
     
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()

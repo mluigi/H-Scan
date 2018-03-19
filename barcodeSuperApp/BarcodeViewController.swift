@@ -34,8 +34,14 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
 extension BarcodeViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         lastCode = code
-        present(self.storyboard!.instantiateViewController(withIdentifier: "ProductViewController"), animated: true, completion: nil)
-        messageViewController.textLabel.text = "Inquadra il codice a barre"
+        if dictionary.contains(where: {$0.key == code}) {
+            DB.saveProduct(lastCode)
+            //present(self.storyboard!.instantiateViewController(withIdentifier: "ProductViewController"), animated: true, completion: nil)
+            resetWithError() 
+        } else {
+            resetWithError(message: "Product not found.")
+        }
+        
     }
 }
 
