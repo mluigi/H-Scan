@@ -56,7 +56,7 @@ var Orange = Product(name: "Orange", image: #imageLiteral(resourceName:"arancia"
 var Banana = Product(name: "Banana", image: #imageLiteral(resourceName: "banana"), calories: 95, pieces: 1, nutritionalProprieties: "It can help against heartburn , lowers blood pressure, stimulates the production of hemoglobin")
 
 
-var alternatives = [Apple, Pear, Orange]
+var alternatives = [Apple, Pear, Orange, Banana]
 
 var dictionary: [String: Product] = [
     "7622210788078": MilkaChocoBrownie,
