@@ -46,7 +46,7 @@ var Cerealix = Product(name: "Cerealix", image: #imageLiteral(resourceName:"cere
 var Buondi = Product(name: "Buondi Cioccolato", image: #imageLiteral(resourceName:"buondi"), calories: 126, pieces: 6)
 var KinderDelice = Product(name: "Kinder Delice", image: #imageLiteral(resourceName:"kinderDelice"), calories: 185, pieces: 10)
 var CrackersIntegraliMulinoBianco = Product(name: "Crackers Integrali Mulino Bianco", image: #imageLiteral(resourceName:"crackers"), calories: 104, pieces: 20)
-var Ringo = Product(name: "Ringo", image: #imageLiteral(resourceName: "ringo"), calories: 46.10, pieces: 6)
+var Ringo = Product(name: "Ringo Vanilla", image: #imageLiteral(resourceName: "ringo"), calories: 46.10, pieces: 6)
 
 
 var Apple = Product(name: "Apple", image: #imageLiteral(resourceName:"mela"), calories: 60, pieces: 1, nutritionalProprieties: "Helps in cancer prevention, regulates diabetes levels, lower cholesterol")
