@@ -35,11 +35,6 @@ class BarcodeMenuViewController: MenuViewController {
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         imageViewXCenter.constant = -(menuContainerViewController?.transitionOptions.visibleContentWidth ?? 0.0) / 2
