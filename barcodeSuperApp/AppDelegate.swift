@@ -15,9 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        if DB.array(forKey: recentProds) == nil {
+        if DB.recentProducts() == nil {
             DB.set([Product](), forKey: recentProds)
         }
+
+        let date = DB.getDate() ?? Date()
+
+        if date < Date() {
+            calorieGiornaliere = 0
+        }
+
         return true
     }
 

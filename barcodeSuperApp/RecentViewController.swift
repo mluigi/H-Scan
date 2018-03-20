@@ -12,6 +12,7 @@ import InteractiveSideMenu
 class RecentViewController: UIViewController, SideMenuItemContent {
 
     @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,7 +35,7 @@ class RecentViewController: UIViewController, SideMenuItemContent {
 }
 
 extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
-    
+
     func numberOfSections(in tableView: UITableView) -> Int {
         if !DB.recentProducts()!.isEmpty {
             return 1
@@ -43,7 +44,7 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
             return 0
         }
     }
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DB.recentProducts()!.count
     }
@@ -54,16 +55,16 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
         cell.textLabel!.text = product.name
         return cell
     }
-    
-    func emptyMessage(message:String, viewController:RecentViewController) {
-        let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
+
+    func emptyMessage(message: String, viewController: RecentViewController) {
+        let rect = CGRect(origin: CGPoint(x: 0, y: 0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
         let messageLabel = UILabel(frame: rect)
         messageLabel.text = message
         messageLabel.textColor = .black
         messageLabel.numberOfLines = 0;
         messageLabel.textAlignment = .center;
         messageLabel.sizeToFit()
-        
+
         viewController.tableView.backgroundView = messageLabel;
         viewController.tableView.separatorStyle = .none;
     }

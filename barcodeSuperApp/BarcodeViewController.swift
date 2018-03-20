@@ -12,7 +12,7 @@ import InteractiveSideMenu
 
 class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
     var lastCode = ""
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         messageViewController.textLabel.text = "Inquadra il codice a barre"
@@ -20,7 +20,7 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
         errorDelegate = self
         dismissalDelegate = self
     }
-    
+
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()
     }
@@ -29,15 +29,15 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
 extension BarcodeViewController: BarcodeScannerCodeDelegate {
     func scanner(_ controller: BarcodeScannerViewController, didCaptureCode code: String, type: String) {
         lastCode = code
-        if dictionary.contains(where: {$0.key == code}) {
+        if dictionary.contains(where: { $0.key == code }) {
             DB.saveProduct(lastCode)
             temp = dictionary[lastCode]!
             self.navigationController!.pushViewController(self.storyboard!.instantiateViewController(withIdentifier: "ProductViewController"), animated: true)
-            resetWithError() 
+            resetWithError()
         } else {
             resetWithError(message: "Product not found.")
         }
-        
+
     }
 }
 
