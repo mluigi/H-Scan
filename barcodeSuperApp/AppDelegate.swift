@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let date = DB.getDate()
         if date == nil || date! < Date() {
-            calorieGiornaliere = 0
+            calorieConsumate = 0.0
             DB.saveDate(date: Date())
         }
 

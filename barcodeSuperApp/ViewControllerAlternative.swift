@@ -20,32 +20,26 @@ class ViewControllerAlternative: UIViewController {
     @IBOutlet var circleGraphEsterno: CircleGraphView!
     @IBOutlet var circleGraphInterno: CircleGraphView!
 
-    var calorieConsumate: Double = 1200
     var caloriePersona = calcoloCalorieGiornaliere()
 
     var previousRandomNumber = -1
+    var randomAlternative: Product?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-
+        
         let randomnumber = Int(arc4random_uniform(UInt32(alternatives.count)))
-        let randomAlternative = alternatives[randomnumber]
-
-//        //riga di prova
-//        let randomnumber = Int(arc4random_uniform(10))
-//        let randomAlternative = Product(name: "Apple", image: #imageLiteral(resourceName: "kinderBueno"), calories: 60, pieces: 1, nutritionalProprieties: "Helps in cancer prevention, regulates diabetes levels, lower cholesterol")
-
+        randomAlternative = alternatives[randomnumber]
 
         if previousRandomNumber == randomnumber {
             self.viewDidLoad()
 
         } else {
-            imageProdotto.image = randomAlternative.image
-            nomeProdotto.text = randomAlternative.name
-            descrizione.text = randomAlternative.nutritionalProprieties
+            imageProdotto.image = randomAlternative!.image
+            nomeProdotto.text = randomAlternative!.name
+            descrizione.text = randomAlternative!.nutritionalProprieties
             labelQuantita.text = "1"
-            labelCalorie.text = String(randomAlternative.calories)
+            labelCalorie.text = String(randomAlternative!.calories)
 
             //impostazione dei cerchi
 
@@ -61,7 +55,7 @@ class ViewControllerAlternative: UIViewController {
             let backgroundTrackColorInterno = UIColor(white: 0.15, alpha: 0.05)
             circleGraphInterno.arcBackgroundColor = backgroundTrackColorInterno
             circleGraphInterno.arcColor = .red
-            circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(randomAlternative.calories)) / caloriePersona)
+            circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(randomAlternative!.calories)) / caloriePersona)
 
         }
     }
@@ -71,5 +65,8 @@ class ViewControllerAlternative: UIViewController {
     }
 
     @IBAction func eatAlternative(_ sender: Any) {
+        calorieConsumate += Double(self.randomAlternative!.calories)
+        DB.saveCalories(calories: Float(calorieConsumate))
+        self.navigationController?.popViewController(animated: true)
     }
 }
