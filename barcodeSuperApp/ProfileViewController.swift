@@ -175,7 +175,7 @@ func getAge() -> Int {
     let date = try! hkStore.dateOfBirthComponents()
     let today = Calendar.current.dateComponents([.year, .month, .day], from: Date())
     var age = today.year! - date.year!
-    if today.month! <= date.month! && today.day! < date.day! {
+    if today.month! < date.month! || (today.month! == date.month! && today.day! < date.day!) {
         age -= 1
     }
     
