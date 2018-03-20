@@ -24,7 +24,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             calorieConsumate = 0.0
             DB.saveDate(date: Date())
         }
-
+        calorieConsumate = Double(DB.getCalories())
+        
+        requestPermissions()
+        
+        DispatchQueue.global(qos: .background).async {
+            while !permissionsAcquired {
+            }
+            getWeight()
+            switch getSex() {
+            case 1:
+                sesso = "Female"
+            case 2:
+                sesso = "Male"
+            default:
+                sesso = "BOOOOOH"
+            }
+            età = getAge()
+        }
         return true
     }
 

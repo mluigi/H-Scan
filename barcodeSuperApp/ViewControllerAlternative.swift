@@ -67,6 +67,6 @@ class ViewControllerAlternative: UIViewController {
     @IBAction func eatAlternative(_ sender: Any) {
         calorieConsumate += Double(self.randomAlternative!.calories)
         DB.saveCalories(calories: Float(calorieConsumate))
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController?.popToRootViewController(animated: true)
     }
 }
