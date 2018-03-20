@@ -43,5 +43,5 @@ func calcoloCalorieGiornaliere() -> (Double) {
 }
 
 
-var calorieConsumate: Double = 1200.0
+var calorieConsumate: Double = 0.0
 
