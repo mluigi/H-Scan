@@ -58,6 +58,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-VV-bG3">
+                                <rect key="frame" x="305" y="154" width="42" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL7-Ih-YCm">
+                                <rect key="frame" x="305" y="99" width="42" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-vx-J5D">
+                                <rect key="frame" x="96" y="154" width="42" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-k8-Ope">
+                                <rect key="frame" x="98" y="99" width="42" height="20.5"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WvT-2W-EeG">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
@@ -71,41 +99,70 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="yza-7D-hAi">
-                                <rect key="frame" x="10" y="96" width="42" height="82"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Age : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ddV-rt-Q9z">
+                                <rect key="frame" x="46" y="98" width="44" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sex : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0Q-IR-6gS">
+                                <rect key="frame" x="46" y="154" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Height : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YlK-8O-hEt">
+                                <rect key="frame" x="234" y="99" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Weight : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hcp-yX-Q2z">
+                                <rect key="frame" x="234" y="153" width="68" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="acx-O1-bss" customClass="CircleGraphView" customModule="barcodeSuperApp" customModuleProvider="target">
+                                <rect key="frame" x="29" y="271" width="318" height="313"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3GZ-VV-bG3">
-                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JL7-Ih-YCm">
-                                        <rect key="frame" x="0.0" y="20.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ykV-vx-J5D">
-                                        <rect key="frame" x="0.0" y="41" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOT-k8-Ope">
-                                        <rect key="frame" x="0.0" y="61.5" width="42" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RM0-oC-6aA">
+                                        <rect key="frame" x="29" y="128" width="260" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                            </stackView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Calories : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WI-pw-OLj">
+                                <rect key="frame" x="82" y="626" width="118" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hD-3h-DKx">
+                                <rect key="frame" x="220" y="625" width="96" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="v9P-Sv-w71"/>
                     </view>
                     <connections>
+                        <outlet property="calories" destination="RM0-oC-6aA" id="QYp-ai-Jna"/>
+                        <outlet property="circleGraphUnico" destination="acx-O1-bss" id="tMi-KF-Fbe"/>
+                        <outlet property="dailyCAlories" destination="1hD-3h-DKx" id="6Ok-1B-I3K"/>
                         <outlet property="lAge" destination="iOT-k8-Ope" id="IMB-iW-AW2"/>
                         <outlet property="lHeight" destination="3GZ-VV-bG3" id="cCa-Wr-cJO"/>
                         <outlet property="lSex" destination="ykV-vx-J5D" id="ccB-i0-AvN"/>
@@ -127,15 +184,17 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tpd-LJ-grC">
                                 <rect key="frame" x="16" y="20" width="343" height="200"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lgc-g3-oVc">
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="imageView:lgc-g3-oVc:image" translatesAutoresizingMaskIntoConstraints="NO" id="lgc-g3-oVc">
                                         <rect key="frame" x="121" y="50" width="100" height="100"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="ZJO-rA-X0o"/>
                                             <constraint firstAttribute="width" secondItem="lgc-g3-oVc" secondAttribute="height" multiplier="1:1" id="e55-9k-8mf"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="lgc-g3-oVc" firstAttribute="centerX" secondItem="tpd-LJ-grC" secondAttribute="centerX" id="DwZ-zs-3at"/>
                                     <constraint firstAttribute="height" constant="200" id="MaX-kZ-Tw7"/>
@@ -513,5 +572,350 @@
     <resources>
         <image name="BUTTONEAT" width="30" height="30"/>
         <image name="Other" width="240" height="242"/>
+        <image name="imageView:lgc-g3-oVc:image" width="60" height="60">
+            <mutableData key="keyedArchiveRepresentation">
+YnBsaXN0MDDUAQIDBAUGVVZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK8QEgcI
+ExQZHh8jJCsuMTtDR0tPUlUkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdz
+Vk5TUmVwc1dOU0NvbG9ygAKAERIgwAAAgAOAC1h7NjAsIDYwfdIVChYYWk5TLm9iamVjdHOhF4AEgArS
+FQoaHaIbHIAFgAaACRAA0iAKISJfEBROU1RJRkZSZXByZXNlbnRhdGlvboAHgAhPETtCTU0AKgAAOEgA
+AAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8ZGAr/QkAb/352M/+tpEj/z8RW/+PYXv/x
+5WT/9upm//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/9upm//HlZP/j
+2F7/z8RW/62kSP9+djP/QkAb/xkYCv8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/OTYX/52WQf/e1F3//PBp//3za//88Gn//O9p//vvaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/7
+72j//O9p//zwaf/982v//PBp/97UXf+dlkH/OTYX/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/x4bC/+blED/9epn//32bP/98Wr/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//3xav/99mz/9epn/5uUQP8eGwv/AAAA/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/OzkX/9fNWv/+92z//O9p//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//O9p//73bP/XzVr/OzkX/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP86OBf/5txh//30a//67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/99Gv/5txg/zo4F/8AAAD/AAAA/wAAAP8A
+AAD/AAAA/x8cC//YzVr//fRr//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/77mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//fRr/9jNWv8fHAv/AAAA/wAAAP8A
+AAD/AgIB/5yUQP/+92z/+u5o//ruaP/67mj/+u5o//vuaP/77mj/+u5o//ruaP/77mj/+u5o//ruaP/6
+7mj/++9o//vuaP/772j/+u5o//ruaP/67mj/+u5o//zvaP/872n//PBp//zvaf/67mj/+u5o//ruaP/7
+7mj/++5o//vuaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/++5o//vuaP/6
+7mj/+u5o//ruaP/67mj/++9o//vuaP/67mj/+u5o//ruaP/67mj/+u5o//73bP+clED/AgIB/wAAAP8A
+AAD/OTYW//bqZ//772j/++9o//3yav/872n/+u5o//rvaf/672n/+u5o//rvaf/672n/+u5o//ruaP/6
+72j/+u9p//rvaf/672n/+u9o//ruaP/67mj//O9p/6PKXP96tlf/nsdb/9fgY//872j//O9o//ntaP/4
+7Wj/+u9p//rvaf/47Wj/+u5o//vvaf/88Wn/+u9o//ruaP/57Wj/+e1o//ruaP/67mj/+u9p//rvaf/6
+7mj/+u5o//ruaP/672n/+u9p//rvaf/67mj/+u5o//vvaf/982r//PBp//vvaP/26mf/OTYW/wAAAP8A
+AAD/npZB//31a//872n/9epn/6ukUP/Vy13//fFp/4mCRf9saT7/6d1k/5SNSv9oZT3/4NRh//31av+i
+m07/ZGE7/2pnPf9lYjz/wblX//3zaf/67mj//PBp/3e2Vv8/j07/QZNP/0mcUP+HvVj/7+pn//rvaf+S
+i0r/ZWI7/2RhO/+clU3//PNq/+7TYP/kwVz/9uZm//zvaf/m3GT/uLBW//3xaf/w5Gb/dXFB/4eBRv/6
+7mn/+u5o//3zav+zrFP/Y2E7/2hlPP/TyVz//vdr/7GqU/+Si0j/5tti//3yav/99Wv/npZB/wAAAP8Y
+Fwn/4NRd//3yav/06Gf/dnFA/x8fJ/+4sFT//fRq/1BNMv8nJir/39Rh/2FeOv8gICj/08hd//75bP90
+cD//Ghsl/yMjJ/8cHCb/pZ5N//31av/67mj//fFp/6TLXP9Bk0//Q5ZP/0KVT/9Bkk//b7JW//bwaP/B
+uFf/JyYp/yQjJ//BuVf//PFp/8yOTv+7akX/051S//vtaP/y6Gf/rKVS//3xaf/r32X/NDMu/05LNP/5
+7Wj/++5o//32a/+Qi0j/Ghol/yAgJ//At1X///1t/4eDRv8YGCX/Tks1/9rQX//99Wv/4NRd/xgXCf9C
+Pxr//PBp//31av+im03/ISEn/yUkKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyf/qKFP//31av/67mj//PBp/93jZP9Im1D/QpVP/0OWT/9Dlk//QZNP/57HW//9
+9mv/Y2A6/21pPf/+92v/5L5a/7xsRf/LjE3/79hi//nvaf+Ykkv/hH9E//32a//r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/ICAm/2hlPP/572n//PFq/0I/Gv9+
+dzP//fNr//vvaf9eWjn/JCQo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyf/qKFP//31av/67mj/6d1l//zwaf+OwFn/QZJP/0KVT/9Dlk//QpRP/1alU//5
+8mr/s6pU/8vEXP/67Wj/xoJL/86TT//15WX//fZr/9HHXP8jIin/fXlB//73a//r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/KSgo/zQzLf/c02D//fZr/353M/+t
+pEf//fJq//XpaP9QTTb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyf/qKFP//31av/88Wr/m5RO/87EW//48mn/dbRW/0GTT/9ClE//QpRP/0WYUP/b
+4mP/+Oto//zyav/ftVj/yopN//bmZv/98Wn//fNq/8nBWv8hISj/gHtC//73a//r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y0tK//Sx1v//fVr/62kR//P
+xFb//PBp//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyf/qKFP//31av/99Wr/g35F/05LNf/o3mP/9+5o/6PKXP9eqVT/SJtQ/0WXT//I
+2mH//fFp//joZv/Ok0//8Nhi//3zaf/67mj//fNq/8rCWv8iIin/gHtC//73a//r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fRq/8/EVv/j
+2F7//O9p//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyf/qKFP//31av/99Wr/iYNH/xMTJP+clUz//fZr//zvaf/27Wj/3+Zl/8jaYv/s
+6Gb//fJq/+XEXP/lwlv/9+5o/8/FXf/57mj//fNq/8nBWv8eHyf/f3pC//73a//r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fNq/+PYXv/x
+5WT//O9p//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyf/qKFP//31av/99Gr/kotK/zw7L/+vqFL//fRq//vvaf/c0GD/zcNb/9vPX//2
+6mf/+uxo/+bGXf/88Gn/w7tZ/5WPTP/98Wr//fJq/9TLXf8+PDD/hH9E//32a//r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//HlZP/3
+62f//O9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8iISf/pZ9O//31av/672j/6+Jl/+3nZ//58mr//PNq//31av/t5mb/x8Fb/56XTf/p
+3WP/++5o//nrZ//88Wr/7udn//TtaP/882r//PNq//vzav/p4mX/4dhi//zwaf/q3mX/ODYv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//frZ//6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ycmKP8zMSz/wrtY//74a//67mj/9dFe/+uqUv/kkEr/4olI/+WWTP/ttVX/+d5j//32a//8
+82r//PNq//zzav/24GP/771Y/+eaTf/ghEb/4IBF/+OPSv/utVb/+uJk//31av/z6Wj/VVM3/1BNNP/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/Hx4l/zo5L/+/uFf//vdr//DGW//caz//0z0y/880MP/PMy//zzMv/88zMP/QNjD/1EU0/999RP/v
+w1r/6rFU/9+ARf/VTDf/0Dcw/88zMP/PMi//zzIv/88zL//QNjD/1Us2/+WdTv/872n/3tdh/4R/Rv/1
+6Wf/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP93
+c0D/JiUp/7qyVv/++2z/6KFP/9I9Mv/PMi//0DYw/9A2MP/QNzD/0Dcw/9A3MP/QNjD/zzUw/88zL//R
+OTH/0DYw/88zL//PNTD/0DYw/9A3MP/QNzD/0Dcw/9A3MP/QNjD/zzQw/88zMP/ddUL//O5o//PpaP/3
+62f/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP9x
+bT7/f3pD///8bf/pqFL/0DYw/9A1MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NjD/0DYw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A2MP/PMi//4IFG//3zaf/6
+72j/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//31a/+Q
+i0r/4Nli//bXYP/TQTT/zzQw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNjD/0Dcw/+27V//8
+82r/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3xav/Z
+zmH//PRq/998RP/PMi//0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/zzIv/9pqPv/8
+8Wn/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/9
+8Wr/9t1i/9RDNP/QNTD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0DUw/9M/M//0
+1mD/+/Fq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/8
+9Gr/7LZW/881MP/QNjD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0DYw/880MP/q
+r1T//PRq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/8
+9Wr/5JZM/88yL//QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/88yL//j
+j0r//PVq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3xaf/8
+9Wr/4IZH/88yL//QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/88yL//g
+fkX//PVq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3xaf/8
+9Wr/4ING/88yL//QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/88yL//f
+e0T//PVq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/8
+9Wr/4opI/88yL//QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/88yL//g
+g0b//fZr//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/8
+9Wv/5ZxO/88zL//QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/88yL//l
+lkz//fZr//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/8
+9Gr/7LdX/9A1MP/QNjD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/880MP/r
+slX//PRq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3yaf/8
+8mr/9NNg/9M9Mv/QNjD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0DYw/9I7Mv/y
+z17/+/Fq//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3xav/z
+52j/+uxn/9ZUOf/PNDD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/zzQw/9ZPN//5
+6Gb/+u9o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//3xav/D
+ulr/+fNq/+GFRv/PMi//0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/zzIv/913Q//8
+9Gv/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//31av+P
+ikn/491j//HCWv/QNzD/0DYw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/zzQw/+quVP/8
+9Wv/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP9z
+b0D/q6RQ//3xaf/WVTn/zzQw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNTD/1EY0//bgY//7
+72n/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP9x
+bT7/X1w5//z5bP/mnU7/zzMv/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/PMi//4H5E//z1av/6
+7mj/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP93
+c0D/JyYp/9HKXf/652b/1Uo2/880MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A2MP/SOzL/8s1d//zza//6
+7mj/+u5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/Ghol/3ZwQP/++m3/6KVQ/880MP/QNjD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/88yL//ffET//fZr/8e+W//z
+52b/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/ISAm/y0sK//DvFj//fNq/9liPf/PMy//0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/zzQw/9RINf/43mL/39hi/21oPv/1
+6mj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/yUkKP9WUzb/8Opn//PQXv/TQjT/0DQw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNjD/0Dcw/+uvVP/8+Gz/d3JA/09MNf/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8kIyn/sapS///8bf/st1b/0j0y/880MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/Q
+NzD/0Dcw/9A3MP/QNzD/0Dcw/9A3MP/QNzD/0Dcw/9A1MP/PNDD/445K//31a//s4WX/OTgv/1NQNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/6
+7mj/++9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2ZjPP8oJyr/1Mle//74bP95
+dED/IiIm/ysqKf8jIif/p6BP//32a//89Gr/7LhX/9NFNf/PMy//0DYw/9A3MP/QNzD/0Dcw/9A2MP/Q
+NTD/0DUw/9A2MP/QNzD/0Dcw/9A3MP/QNjD/zzQw/9A3MP/ijEn//fFp//3xav/r32X/Ozkv/1NRNv/5
+7Wj/++5o//32a/+Ujkn/IiEm/ygnKf/CuVb///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//ruaP/3
+62f//O9o//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/4NVh/2FeOv8hICj/08hd//74bP91
+cED/Gxsl/yUkKP8dHSb/pZ9O//31av/67mj//PRq//LPXv/aaD7/0Tkx/88zMP/PMzD/zzMw/9A1MP/T
+QTT/00M0/9A2MP/PMzD/zzMw/88zMP/QNjD/1lM5/+qxVP/68Wn/7+Rm//zvaf/r32X/NTMu/09MNP/5
+7Wj/++5o//32a/+Ri0j/Gxol/yIhJ//At1X///xt/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//frZ//x
+5WT//O9p//XpaP9QTjb/JiUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/39Ng/7StVP+Vj0r/6N1j//3zav+8
+s1X/koxI/5aQSf+TjUj/0slc//3xaf/67mj/+u5o//zyav/67mj/7r9Z/+KOSv/fe0T/4IVH/+inUv/0
+02D/9NVg/+inUf/ffkT/3XVC/+CGR//qsVX/+OVl//31av/y5mf/181f//zvaf/z52f/nphM/6qjUP/5
+7Wj/+u5o//3xaf/JwFr/koxI/5WPSf/f1GD//vls/4yHR/8iIib/Kikp/y4tK//Sx1v//fJq//HlZP/j
+2F7//O9p//fsaP9TUTf/JSUo/yYlKf+7s1X//fRq/1ZTNP8uLSv/3dJf//32a//99Gr/++9o//ruaP/9
+8Wr//fVq//30av/99Wr//PBp//ruaP/67mj/+u5o//ruaP/672j//PNq//z1av/89Gr//PVr//z0av/8
+8Wr/+/Fq//z0av/89Gr//PNq//z0av/89Gr/++9p//ruaP/67mj/++9p//ruaP/67mj//fRq//3zav/6
+7mj/+u5o//ruaP/98Wn//fVq//30av/872n//fZr/4yHR/8iIib/Kikp/y8uK//Uyl3//fNq/+PYXv/P
+xFb//O9p//3za/96dUH/ISEm/yYlKf+7s1X//fRq/1ZTNP8uLSv/3dJf//3xaf/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//fZr/4yHR/8iIif/JiUo/0ZEMv/s4mb//fFq/8/EVv+t
+pEf//PBp//3xaf/Uyl3/Ozku/x4eJv+6slX//fRq/1VSM/8sLCr/3dJf//3xaf/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//fZr/4uGR/8dHSb/JyUp/6SdT//982r//PBp/62kR/9+
+djP//fJq//ruaP/982r/x75a/1NRN/++tVb//fNq/1lWN/8zMi3/3tNg//3xaf/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//fZr/4+KSP89Oy//optO//rvaf/772j//fJq/352M/9C
+Pxr//PBp//ruaP/67mj//fNq//LmZv/x5WX/++9o/9XJXf/LwVr/8+dn//vvaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/++9p/+TZYv/m3GP//fNq//vvaP/67mj//PBp/0I/Gv8Y
+Fwn/4NRd//3xav/67mj/+u5o//zvaf/772j/+u5o//3yav/982r/++9o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//zwaf/88Gn/+u5o//ruaP/98Wr/4NRd/xgXCf8A
+AAD/npZB//31a//67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/99Wv/npZB/wAAAP8A
+AAD/OTYW//bqZ//772j/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//vvaP/26mf/OTYW/wAAAP8A
+AAD/AgIB/5yUQP/+92z/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//73bP+clED/AgIB/wAAAP8A
+AAD/AAAA/x8cC//YzVr//fRr//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//fRr/9jNWv8fHAv/AAAA/wAAAP8A
+AAD/AAAA/wAAAP86OBf/5txh//30a//67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/99Gv/5txh/zo4F/8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/OzkX/9fNWv/+92z//O9o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj//O9o//73bP/XzVr/OzkX/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/x4cC/+clUD/9etn//73bP/98mr/++9p//rvaP/672j/+u9o//rvaP/6
+72j/+u9o//rvaP/672j/+u9o//rvaP/672j/+u9o//rvaP/672j/+u9o//rvaP/672j/+u9o//rvaP/6
+72j/+u9o//rvaP/672j/+u9o//rvaP/672j/+u9o//rvaP/672j/+u9o//rvaP/672j/+u9o//rvaP/6
+72j/+u9o//rvaP/672j/++9p//3yav/+92z/9etn/5yVQP8eHAv/AAAA/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/OTcX/52WQv/f1F3//PBp//3za//88Gn//O9p//vvaf/7
+72j/+u9o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u9o//vvaP/7
+72n//O9p//zwaf/982v//PBp/9/UXf+dlkL/OTcX/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8A
+AAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8ZGAr/Qj8a/353NP+tpUj/z8RW/+PYXv/x
+5WT/9upm//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/6
+7mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/+u5o//ruaP/67mj/9upm//HlZP/j
+2F7/z8RW/62lSP9+dzT/Qj8a/xkYCv8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8A
+EAEAAAMAAAABADwAAAEBAAMAAAABADwAAAECAAMAAAAEAAA5DgEDAAMAAAABAAEAAAEGAAMAAAABAAIA
+AAEKAAMAAAABAAEAAAERAAQAAAABAAAACAESAAMAAAABAAEAAAEVAAMAAAABAAQAAAEWAAMAAAABADwA
+AAEXAAQAAAABAAA4QAEcAAMAAAABAAEAAAEoAAMAAAABAAIAAAFSAAMAAAABAAEAAAFTAAMAAAAEAAA5
+FodzAAcAAAIkAAA5HgAAAAAACAAIAAgACAABAAEAAQABAAACJGFwcGwEAAAAbW50clJHQiBYWVogB+EA
+BwAHAA0AFgAgYWNzcEFQUEwAAAAAQVBQTAAAAAAAAAAAAAAAAAAAAAAAAPbWAAEAAAAA0y1hcHBsyhqV
+giV/EE04mRPV0eoVggAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKZGVzYwAAAPwAAABlY3By
+dAAAAWQAAAAjd3RwdAAAAYgAAAAUclhZWgAAAZwAAAAUZ1hZWgAAAbAAAAAUYlhZWgAAAcQAAAAUclRS
+QwAAAdgAAAAgY2hhZAAAAfgAAAAsYlRSQwAAAdgAAAAgZ1RSQwAAAdgAAAAgZGVzYwAAAAAAAAALRGlz
+cGxheSBQMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB0ZXh0AAAAAENvcHlyaWdodCBBcHBsZSBJbmMuLCAy
+MDE3AABYWVogAAAAAAAA81EAAQAAAAEWzFhZWiAAAAAAAACD3wAAPb////+7WFlaIAAAAAAAAEq/AACx
+NwAACrlYWVogAAAAAAAAKDgAABELAADIuXBhcmEAAAAAAAMAAAACZmYAAPKnAAANWQAAE9AAAApbc2Yz
+MgAAAAAAAQxCAAAF3v//8yYAAAeTAAD9kP//+6L///2jAAAD3AAAwG7SJSYnKFokY2xhc3NuYW1lWCRj
+bGFzc2VzXxAQTlNCaXRtYXBJbWFnZVJlcKMnKSpaTlNJbWFnZVJlcFhOU09iamVjdNIlJiwtV05TQXJy
+YXmiLCrSJSYvMF5OU011dGFibGVBcnJheaMvLCrVMjM0NQo2Nzg5OldOU1doaXRlXE5TQ29tcG9uZW50
+c1xOU0NvbG9yU3BhY2VfEBJOU0N1c3RvbUNvbG9yU3BhY2VEMCAwAEMwIDAQA4AMgBDUPD0+Cj9AQUJU
+TlNJRFVOU0lDQ1dOU01vZGVsEAmADRAAgA/SRApFRldOUy5kYXRhTxERaAAAEWhhcHBsAgAAAG1udHJH
+UkFZWFlaIAfcAAgAFwAPAC4AD2Fjc3BBUFBMAAAAAG5vbmUAAAAAAAAAAAAAAAAAAAAAAAD21gABAAAA
+ANMtYXBwbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABWRlc2MA
+AADAAAAAeWRzY20AAAE8AAAH6GNwcnQAAAkkAAAAI3d0cHQAAAlIAAAAFGtUUkMAAAlcAAAIDGRlc2MA
+AAAAAAAAH0dlbmVyaWMgR3JheSBHYW1tYSAyLjIgUHJvZmlsZQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABt
+bHVjAAAAAAAAAB8AAAAMc2tTSwAAAC4AAAGEZGFESwAAADgAAAGyY2FFUwAAADgAAAHqdmlWTgAAAEAA
+AAIicHRCUgAAAEoAAAJidWtVQQAAACwAAAKsZnJGVQAAAD4AAALYaHVIVQAAADQAAAMWemhUVwAAAB4A
+AANKbmJOTwAAADoAAANoY3NDWgAAACgAAAOiaGVJTAAAACQAAAPKaXRJVAAAAE4AAAPucm9STwAAACoA
+AAQ8ZGVERQAAAE4AAARma29LUgAAACIAAAS0c3ZTRQAAADgAAAGyemhDTgAAAB4AAATWamFKUAAAACYA
+AAT0ZWxHUgAAACoAAAUacHRQTwAAAFIAAAVEbmxOTAAAAEAAAAWWZXNFUwAAAEwAAAXWdGhUSAAAADIA
+AAYidHJUUgAAACQAAAZUZmlGSQAAAEYAAAZ4aHJIUgAAAD4AAAa+cGxQTAAAAEoAAAb8cnVSVQAAADoA
+AAdGZW5VUwAAADwAAAeAYXJFRwAAACwAAAe8AFYBYQBlAG8AYgBlAGMAbgDhACAAcwBpAHYA4QAgAGcA
+YQBtAGEAIAAyACwAMgBHAGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgADIALAAyACAAZwBhAG0AbQBhAHAA
+cgBvAGYAaQBsAEcAYQBtAG0AYQAgAGQAZQAgAGcAcgBpAHMAbwBzACAAZwBlAG4A6AByAGkAYwBhACAA
+MgAuADIAQx6lAHUAIABoAOwAbgBoACAATQDgAHUAIAB4AOEAbQAgAEMAaAB1AG4AZwAgAEcAYQBtAG0A
+YQAgADIALgAyAFAAZQByAGYAaQBsACAARwBlAG4A6QByAGkAYwBvACAAZABhACAARwBhAG0AYQAgAGQA
+ZQAgAEMAaQBuAHoAYQBzACAAMgAsADIEFwQwBDMEMAQ7BEwEPQQwACAARwByAGEAeQAtBDMEMAQ8BDAA
+IAAyAC4AMgBQAHIAbwBmAGkAbAAgAGcA6QBuAOkAcgBpAHEAdQBlACAAZwByAGkAcwAgAGcAYQBtAG0A
+YQAgADIALAAyAMEAbAB0AGEAbADhAG4AbwBzACAAcwB6APwAcgBrAGUAIABnAGEAbQBtAGEAIAAyAC4A
+MpAadShwcJaOUUlepgAgADIALgAyACCCcl9pY8+P8ABHAGUAbgBlAHIAaQBzAGsAIABnAHIA5QAgAGcA
+YQBtAG0AYQAgADIALAAyAC0AcAByAG8AZgBpAGwATwBiAGUAYwBuAOEAIAFhAGUAZADhACAAZwBhAG0A
+YQAgADIALgAyBdIF0AXeBdQAIAXQBeQF1QXoACAF2wXcBdwF2QAgADIALgAyAFAAcgBvAGYAaQBsAG8A
+IABnAHIAaQBnAGkAbwAgAGcAZQBuAGUAcgBpAGMAbwAgAGQAZQBsAGwAYQAgAGcAYQBtAG0AYQAgADIA
+LAAyAEcAYQBtAGEAIABnAHIAaQAgAGcAZQBuAGUAcgBpAGMBAwAgADIALAAyAEEAbABsAGcAZQBtAGUA
+aQBuAGUAcwAgAEcAcgBhAHUAcwB0AHUAZgBlAG4ALQBQAHIAbwBmAGkAbAAgAEcAYQBtAG0AYQAgADIA
+LAAyx3y8GAAg1ozAyQAgrBC5yAAgADIALgAyACDVBLhc0wzHfGZukBpwcF6mfPtlcAAgADIALgAyACBj
+z4/wZYdO9k4AgiwwsDDsMKQwrDDzMN4AIAAyAC4AMgAgMNcw7TDVMKEwpDDrA5MDtQO9A7kDugPMACAD
+kwO6A8EDuQAgA5MDrAO8A7wDsQAgADIALgAyAFAAZQByAGYAaQBsACAAZwBlAG4A6QByAGkAYwBvACAA
+ZABlACAAYwBpAG4AegBlAG4AdABvAHMAIABkAGEAIABHAGEAbQBtAGEAIAAyACwAMgBBAGwAZwBlAG0A
+ZQBlAG4AIABnAHIAaQBqAHMAIABnAGEAbQBtAGEAIAAyACwAMgAtAHAAcgBvAGYAaQBlAGwAUABlAHIA
+ZgBpAGwAIABnAGUAbgDpAHIAaQBjAG8AIABkAGUAIABnAGEAbQBtAGEAIABkAGUAIABnAHIAaQBzAGUA
+cwAgADIALAAyDiMOMQ4HDioONQ5BDgEOIQ4hDjIOQA4BDiMOIg5MDhcOMQ5IDicORA4bACAAMgAuADIA
+RwBlAG4AZQBsACAARwByAGkAIABHAGEAbQBhACAAMgAsADIAWQBsAGUAaQBuAGUAbgAgAGgAYQByAG0A
+YQBhAG4AIABnAGEAbQBtAGEAIAAyACwAMgAgAC0AcAByAG8AZgBpAGkAbABpAEcAZQBuAGUAcgBpAQ0A
+awBpACAARwByAGEAeQAgAEcAYQBtAG0AYQAgADIALgAyACAAcAByAG8AZgBpAGwAVQBuAGkAdwBlAHIA
+cwBhAGwAbgB5ACAAcAByAG8AZgBpAGwAIABzAHoAYQByAG8BWwBjAGkAIABnAGEAbQBtAGEAIAAyACwA
+MgQeBDEESQQwBE8AIARBBDUEQAQwBE8AIAQzBDAEPAQ8BDAAIAAyACwAMgAtBD8EQAQ+BEQEOAQ7BEwA
+RwBlAG4AZQByAGkAYwAgAEcAcgBhAHkAIABHAGEAbQBtAGEAIAAyAC4AMgAgAFAAcgBvAGYAaQBsAGUG
+OgYnBkUGJwAgADIALgAyACAGRAZIBkYAIAYxBkUGJwYvBkoAIAY5BicGRXRleHQAAAAAQ29weXJpZ2h0
+IEFwcGxlIEluYy4sIDIwMTIAAFhZWiAAAAAAAADzUQABAAAAARbMY3VydgAAAAAAAAQAAAAABQAKAA8A
+FAAZAB4AIwAoAC0AMgA3ADsAQABFAEoATwBUAFkAXgBjAGgAbQByAHcAfACBAIYAiwCQAJUAmgCfAKQA
+qQCuALIAtwC8AMEAxgDLANAA1QDbAOAA5QDrAPAA9gD7AQEBBwENARMBGQEfASUBKwEyATgBPgFFAUwB
+UgFZAWABZwFuAXUBfAGDAYsBkgGaAaEBqQGxAbkBwQHJAdEB2QHhAekB8gH6AgMCDAIUAh0CJgIvAjgC
+QQJLAlQCXQJnAnECegKEAo4CmAKiAqwCtgLBAssC1QLgAusC9QMAAwsDFgMhAy0DOANDA08DWgNmA3ID
+fgOKA5YDogOuA7oDxwPTA+AD7AP5BAYEEwQgBC0EOwRIBFUEYwRxBH4EjASaBKgEtgTEBNME4QTwBP4F
+DQUcBSsFOgVJBVgFZwV3BYYFlgWmBbUFxQXVBeUF9gYGBhYGJwY3BkgGWQZqBnsGjAadBq8GwAbRBuMG
+9QcHBxkHKwc9B08HYQd0B4YHmQesB78H0gflB/gICwgfCDIIRghaCG4IggiWCKoIvgjSCOcI+wkQCSUJ
+OglPCWQJeQmPCaQJugnPCeUJ+woRCicKPQpUCmoKgQqYCq4KxQrcCvMLCwsiCzkLUQtpC4ALmAuwC8gL
+4Qv5DBIMKgxDDFwMdQyODKcMwAzZDPMNDQ0mDUANWg10DY4NqQ3DDd4N+A4TDi4OSQ5kDn8Omw62DtIO
+7g8JDyUPQQ9eD3oPlg+zD88P7BAJECYQQxBhEH4QmxC5ENcQ9RETETERTxFtEYwRqhHJEegSBxImEkUS
+ZBKEEqMSwxLjEwMTIxNDE2MTgxOkE8UT5RQGFCcUSRRqFIsUrRTOFPAVEhU0FVYVeBWbFb0V4BYDFiYW
+SRZsFo8WshbWFvoXHRdBF2UXiReuF9IX9xgbGEAYZRiKGK8Y1Rj6GSAZRRlrGZEZtxndGgQaKhpRGnca
+nhrFGuwbFBs7G2MbihuyG9ocAhwqHFIcexyjHMwc9R0eHUcdcB2ZHcMd7B4WHkAeah6UHr4e6R8THz4f
+aR+UH78f6iAVIEEgbCCYIMQg8CEcIUghdSGhIc4h+yInIlUigiKvIt0jCiM4I2YjlCPCI/AkHyRNJHwk
+qyTaJQklOCVoJZclxyX3JicmVyaHJrcm6CcYJ0kneierJ9woDSg/KHEooijUKQYpOClrKZ0p0CoCKjUq
+aCqbKs8rAis2K2krnSvRLAUsOSxuLKIs1y0MLUEtdi2rLeEuFi5MLoIuty7uLyQvWi+RL8cv/jA1MGww
+pDDbMRIxSjGCMbox8jIqMmMymzLUMw0zRjN/M7gz8TQrNGU0njTYNRM1TTWHNcI1/TY3NnI2rjbpNyQ3
+YDecN9c4FDhQOIw4yDkFOUI5fzm8Ofk6Njp0OrI67zstO2s7qjvoPCc8ZTykPOM9Ij1hPaE94D4gPmA+
+oD7gPyE/YT+iP+JAI0BkQKZA50EpQWpBrEHuQjBCckK1QvdDOkN9Q8BEA0RHRIpEzkUSRVVFmkXeRiJG
+Z0arRvBHNUd7R8BIBUhLSJFI10kdSWNJqUnwSjdKfUrESwxLU0uaS+JMKkxyTLpNAk1KTZNN3E4lTm5O
+t08AT0lPk0/dUCdQcVC7UQZRUFGbUeZSMVJ8UsdTE1NfU6pT9lRCVI9U21UoVXVVwlYPVlxWqVb3V0RX
+klfgWC9YfVjLWRpZaVm4WgdaVlqmWvVbRVuVW+VcNVyGXNZdJ114XcleGl5sXr1fD19hX7NgBWBXYKpg
+/GFPYaJh9WJJYpxi8GNDY5dj62RAZJRk6WU9ZZJl52Y9ZpJm6Gc9Z5Nn6Wg/aJZo7GlDaZpp8WpIap9q
+92tPa6dr/2xXbK9tCG1gbbluEm5rbsRvHm94b9FwK3CGcOBxOnGVcfByS3KmcwFzXXO4dBR0cHTMdSh1
+hXXhdj52m3b4d1Z3s3gReG54zHkqeYl553pGeqV7BHtje8J8IXyBfOF9QX2hfgF+Yn7CfyN/hH/lgEeA
+qIEKgWuBzYIwgpKC9INXg7qEHYSAhOOFR4Wrhg6GcobXhzuHn4gEiGmIzokziZmJ/opkisqLMIuWi/yM
+Y4zKjTGNmI3/jmaOzo82j56QBpBukNaRP5GokhGSepLjk02TtpQglIqU9JVflcmWNJaflwqXdZfgmEyY
+uJkkmZCZ/JpomtWbQpuvnByciZz3nWSd0p5Anq6fHZ+Ln/qgaaDYoUehtqImopajBqN2o+akVqTHpTil
+qaYapoum/adup+CoUqjEqTepqaocqo+rAqt1q+msXKzQrUStuK4trqGvFq+LsACwdbDqsWCx1rJLssKz
+OLOutCW0nLUTtYq2AbZ5tvC3aLfguFm40blKucK6O7q1uy67p7whvJu9Fb2Pvgq+hL7/v3q/9cBwwOzB
+Z8Hjwl/C28NYw9TEUcTOxUvFyMZGxsPHQce/yD3IvMk6ybnKOMq3yzbLtsw1zLXNNc21zjbOts83z7jQ
+OdC60TzRvtI/0sHTRNPG1EnUy9VO1dHWVdbY11zX4Nhk2OjZbNnx2nba+9uA3AXcit0Q3ZbeHN6i3ynf
+r+A24L3hROHM4lPi2+Nj4+vkc+T85YTmDeaW5x/nqegy6LzpRunQ6lvq5etw6/vshu0R7ZzuKO6070Dv
+zPBY8OXxcvH/8ozzGfOn9DT0wvVQ9d72bfb794r4Gfio+Tj5x/pX+uf7d/wH/Jj9Kf26/kv+3P9t//+A
+DtIlJkhJXU5TTXV0YWJsZURhdGGjSEoqVk5TRGF0YdIlJkxNXE5TQ29sb3JTcGFjZaJOKlxOU0NvbG9y
+U3BhY2XSJSZQUVdOU0NvbG9yolAq0iUmU1RXTlNJbWFnZaJTKl8QD05TS2V5ZWRBcmNoaXZlctFXWFRy
+b290gAEACAARABoAIwAtADIANwBMAFIAXQBkAGsAeAB/AIcAiQCLAJAAkgCUAJ0AogCtAK8AsQCzALgA
+uwC9AL8AwQDDAMgA3wDhAOM8KTwuPDk8QjxVPFk8ZDxtPHI8ejx9PII8kTyVPKA8qDy1PMI81zzcPOA8
+4jzkPOY87zz0PPo9Aj0EPQY9CD0KPQ89F06DToVOik6YTpxOo06oTrVOuE7FTspO0k7VTtpO4k7lTvdO
++k7/AAAAAAAAAgEAAAAAAAAAWQAAAAAAAAAAAAAAAAAATwE
+</mutableData>
+        </image>
     </resources>
 </document>

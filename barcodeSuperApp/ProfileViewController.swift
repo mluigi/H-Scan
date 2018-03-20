@@ -39,6 +39,11 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
     var height = 0.0
     var age = 0
     var sex = 0
+    
+    @IBOutlet weak var circleGraphUnico: CircleGraphView!
+    @IBOutlet weak var dailyCAlories: UILabel!
+    @IBOutlet weak var calories: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.global(qos: .background).async {
@@ -49,6 +54,29 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             self.updateSex()
             self.lAge.text = String(getAge())
         }
+        
+       circleGraphUnico.arcWidth = 25
+        
+        let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
+        circleGraphUnico.arcBackgroundColor = backgroundTrackColor
+        // circleGraphEsterno.arcColor = .#FFFF
+        circleGraphUnico.endArc = CGFloat(calorieConsumate / calcoloCalorieGiornaliere())
+        dailyCAlories.text = String ( calcoloCalorieGiornaliere())
+        
+        calories.text  = String (format: "%.0f" , calorieConsumate) + " / " + String ( format : "%.0f", calcoloCalorieGiornaliere()) + " kCal"
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        circleGraphUnico.arcWidth = 25
+        
+        let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
+        circleGraphUnico.arcBackgroundColor = backgroundTrackColor
+        // circleGraphEsterno.arcColor = .#FFFF
+        circleGraphUnico.endArc = CGFloat(calorieConsumate / calcoloCalorieGiornaliere())
+        dailyCAlories.text = String ( calcoloCalorieGiornaliere())
+        
+        calories.text  = String (format: "%.0f" , calorieConsumate) + " / " + String ( format : "%.0f", calcoloCalorieGiornaliere()) + " kCal"
+        
     }
 
     func updateHeight() {
@@ -66,7 +94,9 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
     }
 
     func updateWeight() {
-        self.lWeight.text = String(peso)
+        DispatchQueue.main.async {
+            self.lWeight.text = String(peso)
+        }
     }
 
     func updateSex() {

@@ -13,7 +13,7 @@ var peso: Double = 85.0
 var sesso = "M"
 var età: Int = 26
 
-func calcoloCalorieGiornaliere() -> (Double) {
+func calcoloCalorieGiornaliere() -> Double {
 
     var risultato: Double = 0
 

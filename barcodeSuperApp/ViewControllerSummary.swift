@@ -31,7 +31,7 @@ class ViewControllerSummary: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
 
         //impostazione delle label
         print(temp.name)
