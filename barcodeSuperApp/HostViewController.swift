@@ -36,7 +36,7 @@ class HostViewController: MenuContainerViewController {
 
         // Part of item content remaining visible on right when menu is shown
         options.visibleContentWidth = size.width / 6
-        
+
         options.contentScale = 1.0
         self.transitionOptions = options
     }

@@ -12,9 +12,9 @@ import HealthKit
 import HealthKitUI
 
 //let hkStore = HKHealthStore()
-let hkStore:HKHealthStore = HKHealthStore()
+let hkStore: HKHealthStore = HKHealthStore()
 
-let healthKitTypesToRead : Set<HKObjectType> = [
+let healthKitTypesToRead: Set<HKObjectType> = [
     HKSampleType.quantityType(forIdentifier: .height)!,
     HKSampleType.quantityType(forIdentifier: .bodyMass)!,
     HKSampleType.quantityType(forIdentifier: .bodyMassIndex)!,
@@ -29,7 +29,6 @@ let healthKitTypesToWrite: Set<HKSampleType> = [
 ]
 
 
-
 class ProfileViewController: UIViewController, SideMenuItemContent {
     @IBOutlet weak var lHeight: UILabel!
     @IBOutlet weak var lWeight: UILabel!
@@ -39,26 +38,27 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
     var height = 0.0
     var age = 0
     var sex = 0
-    
+
     var permissionsAcquired = false
-    
-    
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         requestPermissions()
-        
+
         DispatchQueue.global(qos: .background).async {
-            while !self.permissionsAcquired{}
-            
+            while !self.permissionsAcquired {
+            }
+
             self.updateHeight()
             self.updateWeight()
             self.updateSex()
             self.lAge.text = String(self.getAge())
         }
-        
+
 
     }
-    
+
     func updateHeight() {
         let heightSample = HKSampleType.quantityType(forIdentifier: .height)
         getMostRecentSample(for: heightSample!, completion: { (sample, error) in
@@ -72,7 +72,7 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             self.lHeight.text = String(self.height)
         })
     }
-    
+
     func updateWeight() {
         let weightSample = HKSampleType.quantityType(forIdentifier: .bodyMass)
         getMostRecentSample(for: weightSample!, completion: { (sample, error) in
@@ -85,9 +85,9 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             self.weight = sample.quantity.doubleValue(for: HKUnit.gramUnit(with: .kilo))
             self.lWeight.text = String(self.weight)
         })
-        
+
     }
-    
+
     func updateSex() {
         let sex = try! hkStore.biologicalSex().biologicalSex.rawValue
         switch sex {
@@ -99,63 +99,63 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             self.lSex.text = "BOOOOOH"
         }
     }
-    
-    func getAge()->Int {
+
+    func getAge() -> Int {
         let date = try! hkStore.dateOfBirthComponents()
         let today = Calendar.current.dateComponents([.year, .month, .day], from: Date())
         var age = today.year! - date.year!
         if today.month! <= date.month! && today.day! < date.day! {
             age -= 1
         }
-        
+
         return age
     }
-    
-    
+
+
     func getMostRecentSample(for sampleType: HKSampleType,
                              completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
-        
+
         //1. Use HKQuery to load the most recent samples.
         let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
-                                                              end: Date(),
-                                                              options: .strictEndDate)
-        
+                end: Date(),
+                options: .strictEndDate)
+
         let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
-                                              ascending: false)
-        
+                ascending: false)
+
         let limit = 1
-        
+
         let sampleQuery = HKSampleQuery(sampleType: sampleType,
-                                        predicate: mostRecentPredicate,
-                                        limit: limit,
-                                        sortDescriptors: [sortDescriptor]) { (query, samples, error) in
-                                            
-                                            //2. Always dispatch to the main thread when complete.
-                                            DispatchQueue.main.async {
-                                                
-                                                guard let samples = samples,
-                                                    let mostRecentSample = samples.first as? HKQuantitySample else {
-                                                        
-                                                        completion(nil, error)
-                                                        return
-                                                }
-                                                
-                                                completion(mostRecentSample, nil)
-                                            }
+                predicate: mostRecentPredicate,
+                limit: limit,
+                sortDescriptors: [sortDescriptor]) { (query, samples, error) in
+
+            //2. Always dispatch to the main thread when complete.
+            DispatchQueue.main.async {
+
+                guard let samples = samples,
+                      let mostRecentSample = samples.first as? HKQuantitySample else {
+
+                    completion(nil, error)
+                    return
+                }
+
+                completion(mostRecentSample, nil)
+            }
         }
-        
+
         HKHealthStore().execute(sampleQuery)
     }
 
-    func requestPermissions(){
-        
+    func requestPermissions() {
+
         if HKHealthStore.isHealthDataAvailable() {
             // add code to use HealthKit here...
             print("Yes, HealthKit is Available")
         } else {
             print("There is a problem accessing HealthKit")
         }
-        
+
         hkStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
             if success {
                 print("success")
@@ -165,9 +165,9 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             }
         }
     }
-    
+
     @IBAction func openMenu(_ sender: Any) {
         showSideMenu()
     }
-    
+
 }
