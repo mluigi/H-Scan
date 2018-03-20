@@ -9,14 +9,18 @@
 import UIKit
 import InteractiveSideMenu
 
-class RecentViewController: UIViewController, SideMenuItemContent {
-
-    @IBOutlet weak var tableView: UITableView!
+class RecentViewController: UITableViewController, SideMenuItemContent {
+    var recentProducts=[String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        recentProducts=DB.recentProducts()!
+        tableView.reloadData()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +36,10 @@ class RecentViewController: UIViewController, SideMenuItemContent {
         temp = dictionary[DB.recentProducts()![(tableView.indexPathForSelectedRow?.row)!]]
     }
 
-}
-
-extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
-
-    func numberOfSections(in tableView: UITableView) -> Int {
-        if !DB.recentProducts()!.isEmpty {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        if !recentProducts.isEmpty {
+            tableView.separatorStyle = .singleLine
+            tableView.backgroundView = nil
             return 1
         } else {
             emptyMessage(message: "You haven't scanned any product.", viewController: self)
@@ -45,13 +47,13 @@ extension RecentViewController: UITableViewDelegate, UITableViewDataSource {
         }
     }
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return DB.recentProducts()!.count
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return recentProducts.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCell", for: indexPath)
-        let product = dictionary[DB.recentProducts()![indexPath.row]]!
+        let product = dictionary[recentProducts[indexPath.row]]!
         cell.textLabel!.text = product.name
         return cell
     }
