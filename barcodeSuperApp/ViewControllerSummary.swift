@@ -19,7 +19,8 @@ class ViewControllerSummary: UIViewController {
     @IBOutlet var labelKcal: UILabel!
     @IBOutlet var labelQuantita: UILabel!
     @IBOutlet var image: UIImageView!
-
+    
+    var numSelezionato : Double = 1
 
     @IBOutlet var circleGraphEsterno: CircleGraphView!
     @IBOutlet var circleGraphInterno: CircleGraphView!
@@ -64,6 +65,12 @@ class ViewControllerSummary: UIViewController {
     }
 
     @IBAction func eatProduct(_ sender: Any) {
+        
+        calorieConsumate += Double (temp.calories) * numSelezionato
+        
+        print(calorieConsumate)
+        
+        
 
     }
 
@@ -75,6 +82,7 @@ class ViewControllerSummary: UIViewController {
         labelKcal.text = String(format: "%.1f", sender.value * temp!.calories)
         circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(temp!.calories * sender.value)) / caloriePersona)
 
+        numSelezionato = Double (sender.value)
 
     }
 }
