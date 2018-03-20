@@ -49,7 +49,6 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
         DispatchQueue.global(qos: .background).async {
             while !self.permissionsAcquired {
             }
-
             self.updateHeight()
             self.updateWeight()
             self.updateSex()
