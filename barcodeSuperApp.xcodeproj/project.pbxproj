@@ -422,7 +422,7 @@
 				DEVELOPMENT_TEAM = 6DWWU58W63;
 				INFOPLIST_FILE = barcodeSuperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.barcodeSuperApp37879879878;
+				PRODUCT_BUNDLE_IDENTIFIER = iosCourseFoundation.HScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,7 +439,7 @@
 				DEVELOPMENT_TEAM = 6DWWU58W63;
 				INFOPLIST_FILE = barcodeSuperApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ios.barcodeSuperApp37879879878;
+				PRODUCT_BUNDLE_IDENTIFIER = iosCourseFoundation.HScan;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

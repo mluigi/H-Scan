@@ -15,7 +15,6 @@ class BarcodeViewController: BarcodeScannerViewController, SideMenuItemContent {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageViewController.textLabel.text = "Inquadra il codice a barre"
         codeDelegate = self
         errorDelegate = self
         dismissalDelegate = self
