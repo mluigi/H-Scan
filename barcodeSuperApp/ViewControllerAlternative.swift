@@ -23,15 +23,8 @@ class ViewControllerAlternative: UIViewController {
     var calorieConsumate : Double = 1200
     var caloriePersona = calcoloCalorieGiornaliere()
     
-    
-    
-    
     var previousRandomNumber = -1
 
-   
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,8 +43,6 @@ class ViewControllerAlternative: UIViewController {
 
         }
         else {
-            
-            
             imageProdotto.image = randomAlternative.image
             nomeProdotto.text = randomAlternative.name
             descrizione.text = randomAlternative.nutritionalProprieties
@@ -75,31 +66,12 @@ class ViewControllerAlternative: UIViewController {
             circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(randomAlternative.calories)) / caloriePersona)
             
         }
-        
-        
-        
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-   
     @IBAction func alternativa(_ sender: Any) {
         self.viewDidLoad()
     }
-    
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func eatAlternative(_ sender: Any) {
     }
-    */
-
 }

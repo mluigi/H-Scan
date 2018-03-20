@@ -63,6 +63,9 @@ class ViewControllerSummary: UIViewController {
         
         // Do any additional setup after loading the view.
     }
+    @IBAction func eatProduct(_ sender: Any) {
+        
+    }
     
     @IBAction func seleziona(_ sender: UISlider) {
         

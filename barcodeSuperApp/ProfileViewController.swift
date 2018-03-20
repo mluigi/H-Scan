@@ -63,7 +63,7 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
         let heightSample = HKSampleType.quantityType(forIdentifier: .height)
         getMostRecentSample(for: heightSample!, completion: { (sample, error) in
             guard let sample = sample else {
-                if let error = error {
+                if error != nil {
                     print("error")
                 }
                 return
