@@ -70,7 +70,7 @@ var dictionary: [String: Product] = [
     "5000159407236": Mars,
     "5000159461122": Snickers,
     "8000500033715": KinderColazionePiù,
-    "8013355998665": Cerealix,
+    "80550501": Cerealix,
     "8014037008634": Buondi,
     "8000500267103": KinderDelice,
     "8076809516655": CrackersIntegraliMulinoBianco
