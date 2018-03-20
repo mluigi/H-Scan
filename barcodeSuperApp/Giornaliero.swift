@@ -12,7 +12,6 @@ import Foundation
 var peso: Double = 85.0
 var sesso = "M"
 var età: Int = 26
-var calorieGiornaliere = 0.0
 
 func calcoloCalorieGiornaliere() -> (Double) {
 

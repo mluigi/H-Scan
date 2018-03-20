@@ -67,11 +67,8 @@ class ViewControllerSummary: UIViewController {
     @IBAction func eatProduct(_ sender: Any) {
         
         calorieConsumate += Double (temp.calories) * numSelezionato
-        
-        print(calorieConsumate)
-        
-        
-
+        DB.saveCalories(calories: Float(calorieConsumate))
+        self.navigationController?.popViewController(animated: true)
     }
 
     @IBAction func seleziona(_ sender: UISlider) {
@@ -82,7 +79,6 @@ class ViewControllerSummary: UIViewController {
         labelKcal.text = String(format: "%.1f", sender.value * temp!.calories)
         circleGraphInterno.endArc = CGFloat((calorieConsumate + Double(temp!.calories * sender.value)) / caloriePersona)
 
-        numSelezionato = Double (sender.value)
-
+        numSelezionato = Double(sender.value)
     }
 }
