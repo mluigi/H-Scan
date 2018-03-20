@@ -79,21 +79,3 @@ var dictionary: [String: Product] = [
 
 
 var temp : Product!
-
-
-//func pickAnAlternative (_ alternatives:[Product]) -> [Product] {
-//    var pickedalternatives = [Product]()
-//    var index=0
-//    while index < 2 {
-//        let randomnumber = Int(arc4random_uniform(UInt32(alternatives.count)+1))
-//        pickedalternatives.append(alternative[randomnumber])
-//        index += 1
-//    }
-//    return pickedalternatives
-//
-//}
-
-
-
-
-

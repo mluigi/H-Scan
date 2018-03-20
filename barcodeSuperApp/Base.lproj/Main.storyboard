@@ -358,6 +358,9 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" backgroundImage="BUTTONEAT"/>
+                                                <connections>
+                                                    <action selector="eatProduct:" destination="Ev8-rq-P3s" eventType="primaryActionTriggered" id="Fqb-vN-pJs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -407,6 +410,7 @@
                         <outlet property="buttonEat" destination="17Y-lu-wzM" id="1aX-uK-so4"/>
                         <outlet property="circleGraphEsterno" destination="vEa-9X-F9U" id="eq6-7v-8EX"/>
                         <outlet property="circleGraphInterno" destination="574-gr-iwg" id="VAe-Mp-D7q"/>
+                        <outlet property="eatProducvt" destination="17Y-lu-wzM" id="E0w-jI-v4s"/>
                         <outlet property="image" destination="nFT-mV-HtL" id="iNX-cU-Z5c"/>
                         <outlet property="labelKcal" destination="uaj-qU-4XK" id="zSM-Rt-Dfp"/>
                         <outlet property="labelNome" destination="22l-EX-H4j" id="EEt-Z5-O5X"/>
@@ -489,6 +493,9 @@
                                 <rect key="frame" x="268" y="445" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="BUTTONEAT"/>
+                                <connections>
+                                    <action selector="eatAlternative:" destination="maJ-aH-oa6" eventType="primaryActionTriggered" id="Ivp-Km-OVr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJe-Oq-pzP">
                                 <rect key="frame" x="264" y="562" width="74" height="73"/>

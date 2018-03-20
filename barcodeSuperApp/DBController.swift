@@ -10,7 +10,7 @@ import UIKit
 
 let DB = UserDefaults()
 let recentProds = "recentProducts"
-
+let dailyCalories = ""
 extension UserDefaults {
     func saveProduct(_ barcode: String) {
         var products = recentProducts() ?? [String]()
