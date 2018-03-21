@@ -23,7 +23,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
-	<string>camera</string>
+	<string>Camera is needed to scan barcodes.</string>
 	<key>NSHealthShareUsageDescription</key>
 	<string>health share</string>
 	<key>NSHealthUpdateUsageDescription</key>

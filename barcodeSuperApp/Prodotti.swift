@@ -55,7 +55,6 @@ var Pear = Product(name: "Pear", image: #imageLiteral(resourceName:"pera"), calo
 var Orange = Product(name: "Orange", image: #imageLiteral(resourceName:"arancia"), calories: 50, pieces: 1, nutritionalProprieties: "Strengthens the immune system, prevents kidney stones")
 var Banana = Product(name: "Banana", image: #imageLiteral(resourceName: "banana"), calories: 95, pieces: 1, nutritionalProprieties: "It can help against heartburn , lowers blood pressure, stimulates the production of hemoglobin")
 
-
 var alternatives = [Apple, Pear, Orange, Banana]
 
 var dictionary: [String: Product] = [
@@ -74,6 +73,5 @@ var dictionary: [String: Product] = [
     "80509066" : Ringo,
     "80859192" : Fiesta
 ]
-
 
 var temp: Product!
