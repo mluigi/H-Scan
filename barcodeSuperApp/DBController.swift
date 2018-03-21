@@ -21,7 +21,7 @@ extension UserDefaults {
             products.append(barcode)
         }
         set(products, forKey: recentProds)
-        //synchronize()
+        synchronize()
     }
 
     func recentProducts() -> [String]? {

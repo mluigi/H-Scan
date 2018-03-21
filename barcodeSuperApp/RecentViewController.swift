@@ -10,17 +10,17 @@ import UIKit
 import InteractiveSideMenu
 
 class RecentViewController: UITableViewController, SideMenuItemContent {
-    var recentProducts=[String]()
+    var recentProducts = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
-        recentProducts=DB.recentProducts()!
+        recentProducts = DB.recentProducts()!
         tableView.reloadData()
-        
+
     }
 
     override func didReceiveMemoryWarning() {

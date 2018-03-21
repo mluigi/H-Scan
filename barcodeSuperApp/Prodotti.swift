@@ -46,14 +46,14 @@ var Cerealix = Product(name: "Cerealix", image: #imageLiteral(resourceName:"cere
 var Buondi = Product(name: "Buondi Cioccolato", image: #imageLiteral(resourceName:"buondi"), calories: 126, pieces: 6)
 var KinderDelice = Product(name: "Kinder Delice", image: #imageLiteral(resourceName:"kinderDelice"), calories: 185, pieces: 10)
 var CrackersIntegraliMulinoBianco = Product(name: "Crackers Integrali Mulino Bianco", image: #imageLiteral(resourceName:"crackers"), calories: 104, pieces: 20)
-var Ringo = Product(name: "Ringo Vanilla", image: #imageLiteral(resourceName: "ringo"), calories: 46.10, pieces: 6)
-var Fiesta = Product(name: "Fiesta Classic", image: #imageLiteral(resourceName: "fiesta"), calories: 162, pieces: 1)
+var Ringo = Product(name: "Ringo Vanilla", image: #imageLiteral(resourceName:"ringo"), calories: 46.10, pieces: 6)
+var Fiesta = Product(name: "Fiesta Classic", image: #imageLiteral(resourceName:"fiesta"), calories: 162, pieces: 1)
 
 
 var Apple = Product(name: "Apple", image: #imageLiteral(resourceName:"mela"), calories: 60, pieces: 1, nutritionalProprieties: "Helps in cancer prevention, regulates diabetes levels, lower cholesterol")
 var Pear = Product(name: "Pear", image: #imageLiteral(resourceName:"pera"), calories: 45, pieces: 1, nutritionalProprieties: "Improves digestion, lowers cholesterol levels in the blood")
 var Orange = Product(name: "Orange", image: #imageLiteral(resourceName:"arancia"), calories: 50, pieces: 1, nutritionalProprieties: "Strengthens the immune system, prevents kidney stones")
-var Banana = Product(name: "Banana", image: #imageLiteral(resourceName: "banana"), calories: 95, pieces: 1, nutritionalProprieties: "It can help against heartburn , lowers blood pressure, stimulates the production of hemoglobin")
+var Banana = Product(name: "Banana", image: #imageLiteral(resourceName:"banana"), calories: 95, pieces: 1, nutritionalProprieties: "It can help against heartburn , lowers blood pressure, stimulates the production of hemoglobin")
 
 var alternatives = [Apple, Pear, Orange, Banana]
 
@@ -70,8 +70,8 @@ var dictionary: [String: Product] = [
     "8014037008634": Buondi,
     "8000500267103": KinderDelice,
     "8076809516655": CrackersIntegraliMulinoBianco,
-    "80509066" : Ringo,
-    "80859192" : Fiesta
+    "80509066": Ringo,
+    "80859192": Fiesta
 ]
 
 var temp: Product!

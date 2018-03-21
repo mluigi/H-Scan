@@ -18,8 +18,8 @@ class ViewControllerSummary: UIViewController {
     @IBOutlet var labelKcal: UILabel!
     @IBOutlet var labelQuantita: UILabel!
     @IBOutlet var image: UIImageView!
-    
-    var numSelezionato : Double = 1
+
+    var numSelezionato: Double = 1
 
     @IBOutlet var circleGraphEsterno: CircleGraphView!
     @IBOutlet var circleGraphInterno: CircleGraphView!
@@ -30,7 +30,7 @@ class ViewControllerSummary: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //impostazione delle label
         print(temp.name)
         labelNome.text = temp!.name
@@ -50,7 +50,6 @@ class ViewControllerSummary: UIViewController {
 
         let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
         circleGraphEsterno.arcBackgroundColor = backgroundTrackColor
-        // circleGraphEsterno.arcColor = .#FFFF
         circleGraphEsterno.endArc = CGFloat(calorieConsumate / caloriePersona)
 
         let backgroundTrackColorInterno = UIColor(white: 0.15, alpha: 0.05)
@@ -62,7 +61,7 @@ class ViewControllerSummary: UIViewController {
     }
 
     @IBAction func eatProduct(_ sender: Any) {
-        calorieConsumate += Double (temp.calories) * numSelezionato
+        calorieConsumate += Double(temp.calories) * numSelezionato
         DB.saveCalories(calories: Float(calorieConsumate))
         self.navigationController?.popViewController(animated: true)
     }

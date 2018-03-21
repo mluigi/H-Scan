@@ -25,9 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             DB.saveDate(date: Date())
         }
         calorieConsumate = Double(DB.getCalories())
-        
+
         requestPermissions()
-        
+
         DispatchQueue.global(qos: .background).async {
             while !permissionsAcquired {
             }
@@ -41,8 +41,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 sesso = "BOOOOOH"
             }
             età = getAge()
-            
-            print(età,sesso,peso)
+
+            print(età, sesso, peso)
         }
         return true
     }
