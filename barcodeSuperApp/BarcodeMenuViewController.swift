@@ -47,7 +47,6 @@ class BarcodeMenuViewController: MenuViewController {
         gradientLayer.frame = view.bounds
         view.layer.insertSublayer(gradientLayer, at: 0)
     }
-
 }
 
 extension BarcodeMenuViewController: UITableViewDelegate, UITableViewDataSource {
@@ -65,7 +64,6 @@ extension BarcodeMenuViewController: UITableViewDelegate, UITableViewDataSource 
         }
 
         cell.label.text = menuContainerViewController?.contentViewControllers[indexPath.row].title ?? "A Controller"
-
         return cell
     }
 
@@ -73,6 +71,7 @@ extension BarcodeMenuViewController: UITableViewDelegate, UITableViewDataSource 
         guard let menuContainerViewController = self.menuContainerViewController else {
             return
         }
+
         menuContainerViewController.selectContentViewController(menuContainerViewController.contentViewControllers[indexPath.row])
         menuContainerViewController.hideSideMenu()
     }

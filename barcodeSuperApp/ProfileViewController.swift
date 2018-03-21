@@ -39,11 +39,11 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
     var height = 0.0
     var age = 0
     var sex = 0
-    
+
     @IBOutlet weak var circleGraphUnico: CircleGraphView!
     @IBOutlet weak var dailyCAlories: UILabel!
     @IBOutlet weak var calories: UILabel!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         DispatchQueue.global(qos: .background).async {
@@ -54,29 +54,30 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
             self.updateSex()
             self.lAge.text = String(getAge())
         }
-        
-       circleGraphUnico.arcWidth = 25
-        
+
+        circleGraphUnico.arcWidth = 25
+
         let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
         circleGraphUnico.arcBackgroundColor = backgroundTrackColor
         // circleGraphEsterno.arcColor = .#FFFF
         circleGraphUnico.endArc = CGFloat(calorieConsumate / calcoloCalorieGiornaliere())
-        dailyCAlories.text = String ( calcoloCalorieGiornaliere())
-        
-        calories.text  = String (format: "%.0f" , calorieConsumate) + " / " + String ( format : "%.0f", calcoloCalorieGiornaliere()) + " kCal"
-        
+        dailyCAlories.text = String(calcoloCalorieGiornaliere())
+
+        calories.text = String(format: "%.0f", calorieConsumate) + " / " + String(format: "%.0f", calcoloCalorieGiornaliere()) + " kCal"
+
     }
+
     override func viewWillAppear(_ animated: Bool) {
         circleGraphUnico.arcWidth = 25
-        
+
         let backgroundTrackColor = UIColor(white: 0.15, alpha: 0.1)
         circleGraphUnico.arcBackgroundColor = backgroundTrackColor
         // circleGraphEsterno.arcColor = .#FFFF
         circleGraphUnico.endArc = CGFloat(calorieConsumate / calcoloCalorieGiornaliere())
-        dailyCAlories.text = String ( calcoloCalorieGiornaliere())
-        
-        calories.text  = String (format: "%.0f" , calorieConsumate) + " / " + String ( format : "%.0f", calcoloCalorieGiornaliere()) + " kCal"
-        
+        dailyCAlories.text = String(calcoloCalorieGiornaliere())
+
+        calories.text = String(format: "%.0f", calorieConsumate) + " / " + String(format: "%.0f", calcoloCalorieGiornaliere()) + " kCal"
+
     }
 
     func updateHeight() {
@@ -117,14 +118,14 @@ class ProfileViewController: UIViewController, SideMenuItemContent {
 }
 
 func requestPermissions() {
-    
+
     if HKHealthStore.isHealthDataAvailable() {
         // add code to use HealthKit here...
         print("Yes, HealthKit is Available")
     } else {
         print("There is a problem accessing HealthKit")
     }
-    
+
     hkStore.requestAuthorization(toShare: healthKitTypesToWrite, read: healthKitTypesToRead) { (success, error) -> Void in
         if success {
             print("success")
@@ -137,36 +138,36 @@ func requestPermissions() {
 
 func getMostRecentSample(for sampleType: HKSampleType,
                          completion: @escaping (HKQuantitySample?, Error?) -> Swift.Void) {
-    
+
     //1. Use HKQuery to load the most recent samples.
     let mostRecentPredicate = HKQuery.predicateForSamples(withStart: Date.distantPast,
-                                                          end: Date(),
-                                                          options: .strictEndDate)
-    
+            end: Date(),
+            options: .strictEndDate)
+
     let sortDescriptor = NSSortDescriptor(key: HKSampleSortIdentifierStartDate,
-                                          ascending: false)
-    
+            ascending: false)
+
     let limit = 1
-    
+
     let sampleQuery = HKSampleQuery(sampleType: sampleType,
-                                    predicate: mostRecentPredicate,
-                                    limit: limit,
-                                    sortDescriptors: [sortDescriptor]) { (query, samples, error) in
-                                        
-                                        //2. Always dispatch to the main thread when complete.
-                                        DispatchQueue.main.async {
-                                            
-                                            guard let samples = samples,
-                                                let mostRecentSample = samples.first as? HKQuantitySample else {
-                                                    
-                                                    completion(nil, error)
-                                                    return
-                                            }
-                                            
-                                            completion(mostRecentSample, nil)
-                                        }
+            predicate: mostRecentPredicate,
+            limit: limit,
+            sortDescriptors: [sortDescriptor]) { (query, samples, error) in
+
+        //2. Always dispatch to the main thread when complete.
+        DispatchQueue.main.async {
+
+            guard let samples = samples,
+                  let mostRecentSample = samples.first as? HKQuantitySample else {
+
+                completion(nil, error)
+                return
+            }
+
+            completion(mostRecentSample, nil)
+        }
     }
-    
+
     hkStore.execute(sampleQuery)
 }
 
@@ -177,7 +178,7 @@ func getAge() -> Int {
     if today.month! < date.month! || (today.month! == date.month! && today.day! < date.day!) {
         age -= 1
     }
-    
+
     return age
 }
 

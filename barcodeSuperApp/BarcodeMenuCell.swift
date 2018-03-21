@@ -20,9 +20,7 @@ class BarcodeMenuCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
         selectedView.backgroundColor = selected ? UIColor.yellow : UIColor.clear
         label.textColor = selected ? UIColor.yellow : UIColor.white
     }
-
 }

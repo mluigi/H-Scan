@@ -27,7 +27,7 @@ class ViewControllerAlternative: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         let randomnumber = Int(arc4random_uniform(UInt32(alternatives.count)))
         randomAlternative = alternatives[randomnumber]
 
