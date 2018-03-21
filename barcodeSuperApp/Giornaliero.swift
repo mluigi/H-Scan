@@ -10,14 +10,14 @@ import Foundation
 
 
 var peso: Double = 85.0
-var sesso = "M"
+var sesso = "Male"
 var età: Int = 26
 
 func calcoloCalorieGiornaliere() -> Double {
 
     var risultato: Double = 0
 
-    if sesso == "M" {
+    if sesso == "Male" {
         // se è uomo
         switch età {
         case 17..<29:  risultato = 15.3 * peso + 679

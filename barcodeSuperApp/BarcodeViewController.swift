@@ -36,7 +36,6 @@ extension BarcodeViewController: BarcodeScannerCodeDelegate {
         } else {
             resetWithError(message: "Product not found.")
         }
-
     }
 }
 

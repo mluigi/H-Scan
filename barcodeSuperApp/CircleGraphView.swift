@@ -23,9 +23,6 @@ class CircleGraphView: UIView {
     override func draw(_ rect: CGRect) {
         // Drawing code
 
-        //var endArc:CGFloat = 0.0 // in range of 0.0 to 1.0
-
-
         //Important constants for circle
         let fullCircle = 2.0 * CGFloat(Double.pi)
         let start: CGFloat = -0.25 * fullCircle
@@ -35,7 +32,6 @@ class CircleGraphView: UIView {
         var centerX = rect.midX
         var centerY = rect.midY
         var center = CGPoint(x: centerX, y: centerY)
-
 
         //define the radius by the smallest side of the view
         var radius: CGFloat = 0.0
@@ -51,7 +47,6 @@ class CircleGraphView: UIView {
 
         //set colorspace
         let colorspace = CGColorSpaceCreateDeviceRGB()
-
 
         //set line attributes
         context!.setLineWidth(arcWidth) // in modo da fare dei bordi all'arcp
@@ -71,7 +66,6 @@ class CircleGraphView: UIView {
         //CGContextSetLineWidth(context, lineWidth* 0.8)
         context?.setLineWidth(arcWidth * 0.9)
 
-
         //Disegno dell'arco di interesse
 
         context!.setStrokeColor(arcColor.cgColor)
@@ -83,9 +77,5 @@ class CircleGraphView: UIView {
 
         context?.addArc(center: center, radius: radius, startAngle: start, endAngle: end, clockwise: false)
         context?.strokePath()
-
-
     }
-
-
 }

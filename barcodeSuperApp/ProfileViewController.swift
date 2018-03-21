@@ -167,9 +167,8 @@ func getMostRecentSample(for sampleType: HKSampleType,
                                         }
     }
     
-    HKHealthStore().execute(sampleQuery)
+    hkStore.execute(sampleQuery)
 }
-
 
 func getAge() -> Int {
     let date = try! hkStore.dateOfBirthComponents()

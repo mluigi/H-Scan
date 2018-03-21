@@ -10,7 +10,6 @@ import UIKit
 
 class ViewControllerSummary: UIViewController {
 
-
     //variabili
     var caloriePersona = calcoloCalorieGiornaliere()
     var numSelezionati = 2
@@ -32,7 +31,6 @@ class ViewControllerSummary: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
         //impostazione delle label
         print(temp.name)
         labelNome.text = temp!.name
@@ -44,7 +42,6 @@ class ViewControllerSummary: UIViewController {
 
         slaier.setValue(Float(1), animated: false)
         slaier.maximumValue = Float(temp!.pieces)
-
 
         //impostazione dei cerchi
 
@@ -65,7 +62,6 @@ class ViewControllerSummary: UIViewController {
     }
 
     @IBAction func eatProduct(_ sender: Any) {
-        
         calorieConsumate += Double (temp.calories) * numSelezionato
         DB.saveCalories(calories: Float(calorieConsumate))
         self.navigationController?.popViewController(animated: true)

@@ -33,7 +33,6 @@ class ViewControllerAlternative: UIViewController {
 
         if previousRandomNumber == randomnumber {
             self.viewDidLoad()
-
         } else {
             imageProdotto.image = randomAlternative!.image
             nomeProdotto.text = randomAlternative!.name
